@@ -1,18 +1,22 @@
-# Nexus Prima — Final Website
+# Nexus Prima — final natural-planets version
 
-Static, deployment-ready website for **nexusprima.org**.
+Static, deployment-ready website.
 
-## Files
+## Deploy
 
-- `index.html` — complete website content
-- `styles.css` — responsive red, white and black design
-- `script.js` — navigation, header and reveal animations
-- `favicon.svg` — site icon
-- `404.html` — custom missing-page screen
-- `robots.txt` and `sitemap.xml` — search-engine files
+Upload every file and folder in this directory to the root of the GitHub repository connected to Vercel. Keep the `assets` folder beside `index.html`.
 
-## Deploy on GitHub
+## Changes in this version
 
-Upload every file in this folder to the root of the repository, replacing the previous versions. Keep the filenames unchanged. Vercel will deploy automatically after the commit.
+- Preserves the approved black, white and red interface.
+- Removes the two hero buttons: “Explore the Mission” and “Read the Journal”.
+- Replaces the abstract CSS planet diagrams with clear, natural images of Earth, the Moon and Mars.
+- Keeps the full approved Nexus Prima text and responsive layout.
 
-No build command or external dependency is required.
+## Image credits
+
+- Earth: NASA, Apollo 17 / Earth Science and Remote Sensing Unit, NASA Johnson Space Center.
+- Moon: NASA Goddard Space Flight Center, composite using Clementine data.
+- Mars: NASA, ESA, Hubble Heritage Team (STScI/AURA), J. Bell (ASU), M. Wolff (Space Science Institute).
+
+Retain these credits when redistributing the website package.
