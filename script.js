@@ -1,30 +1,58 @@
-const menuButton = document.querySelector('.menu-button');
-const nav = document.querySelector('.site-nav');
+const header = document.querySelector("[data-header]");
+const menuButton = document.querySelector("[data-menu-toggle]");
+const menu = document.querySelector("[data-menu]");
+const navLinks = menu ? menu.querySelectorAll("a") : [];
+const year = document.querySelector("[data-year]");
+const revealItems = document.querySelectorAll("[data-reveal]");
 
-menuButton?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
-});
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-document.querySelectorAll('.site-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
+const updateHeader = () => {
+  if (!header) return;
+  header.classList.toggle("is-scrolled", window.scrollY > 16);
+};
+
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
+
+const closeMenu = () => {
+  if (!menuButton || !menu) return;
+  menuButton.setAttribute("aria-expanded", "false");
+  menu.classList.remove("is-open");
+  document.body.classList.remove("menu-open");
+};
+
+if (menuButton && menu) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    menu.classList.toggle("is-open", !isOpen);
+    document.body.classList.toggle("menu-open", !isOpen);
   });
-});
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+  navLinks.forEach(link => link.addEventListener("click", closeMenu));
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeMenu();
   });
-}, { threshold: 0.12 });
+}
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-document.getElementById('year').textContent = new Date().getFullYear();
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+  );
 
-document.querySelectorAll('a[href="#"]').forEach(link => {
-  link.addEventListener('click', event => event.preventDefault());
-});
+  revealItems.forEach(item => observer.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add("is-visible"));
+}

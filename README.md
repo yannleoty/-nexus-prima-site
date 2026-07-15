@@ -1,34 +1,22 @@
-# Nexus Prima Website
+# Nexus Prima v2
 
-This ZIP contains the complete first version of the Nexus Prima website.
+A static, responsive website for **Nexus Prima** using only HTML, CSS, and vanilla JavaScript.
 
-## Included files
+## Files
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `favicon.svg`
+- `index.html` — page structure and content
+- `styles.css` — complete red / white / black visual system
+- `script.js` — mobile menu, header behavior, and scroll reveals
+- `favicon.svg` — geometric Nexus Prima favicon
+- `robots.txt` and `sitemap.xml` — basic search-engine files
 
-## Upload to GitHub
+## Publish with GitHub + Vercel
 
-1. Unzip this archive in the iPhone Files app.
-2. Open your empty GitHub repository.
-3. Tap **uploading an existing file**.
-4. Select all four files above.
-5. Commit the changes.
+1. Replace the existing repository files with these files.
+2. Commit the changes to the `main` branch.
+3. Vercel should redeploy automatically.
+4. Refresh `https://nexusprima.org` after the deployment finishes.
 
-## Deploy with Vercel
+## Before publishing
 
-1. Create a Vercel account using GitHub.
-2. Choose **Add New → Project**.
-3. Import the `nexus-prima-site` repository.
-4. Click **Deploy**.
-5. In Vercel, open **Settings → Domains**.
-6. Add:
-   - `nexusprima.org`
-   - `www.nexusprima.org`
-7. Copy the DNS records Vercel gives you into Porkbun.
-
-## Important
-
-The site shows `hello@nexusprima.org`. Configure email forwarding before expecting that address to receive mail.
+Review all wording and confirm that the selected claims accurately represent the project.

@@ -1,198 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nexus Prima is an emerging research, education, and public-learning initiative exploring humanity's long-term future." />
-  <meta name="theme-color" content="#081018" />
-  <title>Nexus Prima</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexus Prima — Building Humanity's Next Chapter</title>
+  <meta name="description" content="Nexus Prima is an emerging research and education initiative exploring the knowledge, institutions, and technologies that may help humanity survive, cooperate, and build across generations.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nexus Prima — Building Humanity's Next Chapter">
+  <meta property="og:description" content="Research, education, and long-term thinking for humanity's next chapter.">
+  <meta property="og:url" content="https://nexusprima.org/">
+  <link rel="canonical" href="https://nexusprima.org/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Nexus Prima home">
-      <img src="favicon.svg" alt="" />
-      <span>NEXUS PRIMA</span>
-    </a>
+  <div class="site-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Nexus Prima home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".32"/>
+          <polygon points="32,8 53,20 53,44 32,56 11,44 11,20" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <polygon points="32,17 45,24.5 45,39.5 32,47 19,39.5 19,24.5" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".76"/>
+          <circle cx="32" cy="32" r="4.5" fill="#d61f2c"/>
+        </svg>
+        <span class="brand-wordmark"><span>NEXUS</span> <strong>PRIMA</strong></span>
+      </a>
 
-    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">
-      <span></span><span></span>
-      <span class="sr-only">Open navigation</span>
-    </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span></span><span></span>
+      </button>
 
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="#mission">Mission</a>
-      <a href="#questions">Questions</a>
-      <a href="#journal">Journal</a>
-      <a href="#principles">Principles</a>
-    </nav>
-  </header>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-menu>
+        <a href="#mission">Mission</a>
+        <a href="#focus">Focus</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#journal">Journal</a>
+      </nav>
+    </header>
 
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">An emerging research and education initiative</p>
-        <h1>Expanding humanity's <em>adjacent possible.</em></h1>
-        <p class="lead">
-          Nexus Prima explores the knowledge, institutions, and technologies
-          that may help humanity survive, cooperate, and build across generations.
-        </p>
-        <div class="actions">
-          <a class="button primary" href="#mission">Explore the mission</a>
-          <a class="button secondary" href="#journal">Read the journal</a>
-        </div>
-      </div>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--two" aria-hidden="true"></div>
 
-      <div class="hero-art reveal" aria-hidden="true">
-        <div class="sphere">
-          <div class="light"></div>
-          <div class="ring r1"></div>
-          <div class="ring r2"></div>
-          <div class="ring r3"></div>
-          <div class="node n1"></div>
-          <div class="node n2"></div>
-          <div class="node n3"></div>
-        </div>
-        <div class="art-caption">
-          <span>Knowledge</span>
-          <span>Systems</span>
-          <span>Possibility</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="mission" class="section shell">
-      <div class="index">01</div>
-      <div class="section-content reveal">
-        <p class="label">Mission</p>
-        <h2>Strengthen humanity's capacity to think, learn, cooperate, and build across generations.</h2>
-        <p class="section-text">
-          Nexus Prima begins modestly: learning in public, documenting difficult questions,
-          connecting disciplines, and studying the people already working on civilization-scale problems.
-        </p>
-      </div>
-    </section>
-
-    <section id="questions" class="section shell">
-      <div class="index">02</div>
-      <div class="section-content">
-        <div class="reveal">
-          <p class="label">Questions</p>
-          <h2>One civilization. Many interdependent systems.</h2>
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">An emerging research and education initiative</p>
+          <h1>Expanding humanity's <span>next chapter.</span></h1>
+          <p class="hero-intro">
+            Nexus Prima explores the knowledge, institutions, and technologies that may help humanity survive, cooperate, and build across generations.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--light" href="#mission">Explore the mission</a>
+            <a class="button button--ghost" href="#journal">Read the journal</a>
+          </div>
         </div>
 
-        <div class="cards">
-          <article class="card reveal">
-            <span>01</span>
-            <h3>How do civilizations survive?</h3>
-            <p>Resilience, governance, peace, knowledge preservation, and long-term coordination.</p>
-          </article>
-          <article class="card reveal">
-            <span>02</span>
-            <h3>How do we expand capability?</h3>
-            <p>Science, engineering, automation, education, and responsible artificial intelligence.</p>
-          </article>
-          <article class="card reveal">
-            <span>03</span>
-            <h3>How do we build sustainably?</h3>
-            <p>Energy, food, water, infrastructure, and equitable access to essential resources.</p>
-          </article>
-          <article class="card reveal">
-            <span>04</span>
-            <h3>How do we move beyond Earth?</h3>
-            <p>Space systems, habitats, reproduction, health, and self-sustaining settlements.</p>
-          </article>
-          <article class="card reveal">
-            <span>05</span>
-            <h3>How do we understand intelligence?</h3>
-            <p>Human cognition, artificial minds, consciousness, cooperation, and alignment.</p>
-          </article>
-          <article class="card reveal">
-            <span>06</span>
-            <h3>How do we think in centuries?</h3>
-            <p>Institutions that outlive individuals while remaining accountable and adaptable.</p>
-          </article>
+        <div class="hero-signal" aria-hidden="true" data-reveal>
+          <svg viewBox="0 0 520 520" role="presentation">
+            <defs>
+              <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ff3442" stop-opacity=".9"/>
+                <stop offset="45%" stop-color="#d61f2c" stop-opacity=".24"/>
+                <stop offset="100%" stop-color="#d61f2c" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="260" cy="260" r="236" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+            <circle cx="260" cy="260" r="190" fill="none" stroke="#ffffff" stroke-opacity=".08"/>
+            <circle cx="260" cy="260" r="146" fill="none" stroke="#ffffff" stroke-opacity=".10"/>
+            <circle cx="260" cy="260" r="92" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+            <g stroke="#ffffff" stroke-opacity=".42" stroke-width="1">
+              <path d="M260 76L412 164L412 340L260 428L108 340L108 164Z"/>
+              <path d="M260 118L376 185L376 319L260 386L144 319L144 185Z"/>
+              <path d="M260 165L342 212L342 308L260 355L178 308L178 212Z"/>
+              <path d="M108 164L376 319M412 164L144 319M260 76V428M108 340L376 185M412 340L144 185"/>
+            </g>
+            <g fill="#ffffff">
+              <circle cx="260" cy="76" r="4"/><circle cx="412" cy="164" r="4"/>
+              <circle cx="412" cy="340" r="4"/><circle cx="260" cy="428" r="4"/>
+              <circle cx="108" cy="340" r="4"/><circle cx="108" cy="164" r="4"/>
+              <circle cx="260" cy="165" r="3"/><circle cx="342" cy="212" r="3"/>
+              <circle cx="342" cy="308" r="3"/><circle cx="260" cy="355" r="3"/>
+              <circle cx="178" cy="308" r="3"/><circle cx="178" cy="212" r="3"/>
+            </g>
+            <circle cx="260" cy="260" r="86" fill="url(#redGlow)"/>
+            <circle cx="260" cy="260" r="7" fill="#ff3442"/>
+            <circle cx="260" cy="260" r="21" fill="none" stroke="#d61f2c" stroke-opacity=".65"/>
+          </svg>
         </div>
-      </div>
-    </section>
 
-    <section id="journal" class="section shell">
-      <div class="index">03</div>
-      <div class="section-content journal-grid">
-        <div class="journal-intro reveal">
-          <p class="label">Nexus Prima Journal</p>
-          <h2>Learning in public.</h2>
-          <p class="section-text">
-            Essays, research notes, and conversations will document the project's evolution.
-            The purpose is not to appear certain. It is to ask better questions.
+        <a class="scroll-cue" href="#mission" aria-label="Scroll to mission">
+          <span>Scroll to explore</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="section mission" id="mission">
+        <div class="section-label" data-reveal>01 / Mission</div>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Long-term orientation</p>
+          <h2>Build knowledge before certainty.</h2>
+        </div>
+
+        <div class="mission-layout">
+          <p class="mission-lede" data-reveal>
+            Nexus Prima is not a claim to have solved humanity's greatest problems. It is a commitment to study them seriously, connect disciplines, learn in public, and contribute useful work over time.
+          </p>
+
+          <div class="mission-principles">
+            <article class="principle" data-reveal>
+              <span>01</span>
+              <h3>Learn rigorously</h3>
+              <p>Read widely, compare evidence, speak with specialists, and distinguish aspiration from knowledge.</p>
+            </article>
+            <article class="principle" data-reveal>
+              <span>02</span>
+              <h3>Connect systems</h3>
+              <p>Study how energy, institutions, technology, culture, and human behavior shape one another.</p>
+            </article>
+            <article class="principle" data-reveal>
+              <span>03</span>
+              <h3>Publish progressively</h3>
+              <p>Document the evolution of the project through essays, research notes, interviews, and books.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section focus" id="focus">
+        <div class="section-label" data-reveal>02 / Focus</div>
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Five fields of inquiry</p>
+            <h2>The questions beneath the future.</h2>
+          </div>
+          <p>
+            The project begins with a small number of connected domains—each broad enough to matter, and specific enough to investigate.
           </p>
         </div>
 
-        <div class="articles">
-          <a class="article reveal" href="#" aria-label="Coming soon: What makes a civilization durable?">
+        <div class="focus-grid">
+          <article class="focus-card" data-reveal>
+            <span class="focus-index">01</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M25 3 10 26h11l-2 19 19-27H27l-2-15Z"/></svg>
+            </div>
+            <h3>Energy</h3>
+            <p>Abundant, resilient, and sustainable energy systems for civilization-scale capability.</p>
+          </article>
+
+          <article class="focus-card" data-reveal>
+            <span class="focus-index">02</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="13"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M38.1 9.9l-4.2 4.2M14.1 33.9l-4.2 4.2"/></svg>
+            </div>
+            <h3>Consciousness</h3>
+            <p>Human cognition, meaning, values, attention, and the conditions for wiser collective action.</p>
+          </article>
+
+          <article class="focus-card" data-reveal>
+            <span class="focus-index">03</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><ellipse cx="24" cy="24" rx="20" ry="9"/><ellipse cx="24" cy="24" rx="9" ry="20" transform="rotate(45 24 24)"/></svg>
+            </div>
+            <h3>Multi-planetary humanity</h3>
+            <p>Scientific, social, and ethical foundations for extending human presence beyond Earth.</p>
+          </article>
+
+          <article class="focus-card" data-reveal>
+            <span class="focus-index">04</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="36" cy="36" r="5"/><path d="M16 22 31 14M16 26l15 8"/></svg>
+            </div>
+            <h3>Cooperation</h3>
+            <p>Institutions, incentives, trust, and coordination across communities, nations, and generations.</p>
+          </article>
+
+          <article class="focus-card focus-card--wide" data-reveal>
+            <span class="focus-index">05</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M8 34 21 21l7 7 12-16"/><path d="M31 12h9v9"/></svg>
+            </div>
             <div>
-              <span>Essay · Coming soon</span>
+              <h3>Possibilities</h3>
+              <p>The adjacent possibilities created when knowledge, technology, and institutions become mutually reinforcing.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section roadmap" id="roadmap">
+        <div class="section-label" data-reveal>03 / Roadmap</div>
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">A civilization-scale sequence</p>
+            <h2>Earth. Moon. Mars.</h2>
+          </div>
+          <p>
+            Not a prediction or a deadline—a framework for organizing questions about capability, continuity, and expansion.
+          </p>
+        </div>
+
+        <div class="worlds">
+          <article class="world world--earth" data-reveal>
+            <div class="world-visual" aria-hidden="true">
+              <div class="planet planet--earth">
+                <span class="planet-grid"></span>
+                <span class="planet-glow"></span>
+              </div>
+              <span class="orbit orbit--a"></span>
+              <span class="orbit orbit--b"></span>
+            </div>
+            <div class="world-copy">
+              <span class="world-number">01</span>
+              <p class="eyebrow">Earth / Foundation</p>
+              <h3>Make civilization durable.</h3>
+              <ul>
+                <li>Energy abundance and resilience</li>
+                <li>Institutional capacity and cooperation</li>
+                <li>Knowledge preservation across generations</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="world world--moon" data-reveal>
+            <div class="world-visual" aria-hidden="true">
+              <div class="planet planet--moon">
+                <span class="planet-grid"></span>
+                <span class="planet-glow"></span>
+              </div>
+              <span class="orbit orbit--a"></span>
+              <span class="orbit orbit--b"></span>
+            </div>
+            <div class="world-copy">
+              <span class="world-number">02</span>
+              <p class="eyebrow">Moon / Testbed</p>
+              <h3>Prove systems beyond Earth.</h3>
+              <ul>
+                <li>Closed-loop habitats and logistics</li>
+                <li>Science, industry, and autonomous systems</li>
+                <li>Governance for shared off-world infrastructure</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="world world--mars" data-reveal>
+            <div class="world-visual" aria-hidden="true">
+              <div class="planet planet--mars">
+                <span class="planet-grid"></span>
+                <span class="planet-glow"></span>
+              </div>
+              <span class="orbit orbit--a"></span>
+              <span class="orbit orbit--b"></span>
+            </div>
+            <div class="world-copy">
+              <span class="world-number">03</span>
+              <p class="eyebrow">Mars / Continuity</p>
+              <h3>Learn to build an independent world.</h3>
+              <ul>
+                <li>Long-duration autonomy and repair</li>
+                <li>Culture, education, and intergenerational continuity</li>
+                <li>Ethical expansion without repeating old failures</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section approach" id="approach">
+        <div class="section-label" data-reveal>04 / Method</div>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">The operating loop</p>
+          <h2>Learn. Connect. Publish.</h2>
+        </div>
+
+        <div class="approach-track">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Learn</h3>
+            <p>Books, papers, courses, interviews, and direct observation.</p>
+          </article>
+          <i aria-hidden="true"></i>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Connect</h3>
+            <p>Map relationships between disciplines, institutions, technologies, and values.</p>
+          </article>
+          <i aria-hidden="true"></i>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Publish</h3>
+            <p>Make the work visible, revisable, and useful to others.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section journal" id="journal">
+        <div class="section-label" data-reveal>05 / Journal</div>
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Learning in public</p>
+            <h2>Questions before conclusions.</h2>
+          </div>
+          <p>
+            Essays, research notes, and conversations will document the project's evolution.
+          </p>
+        </div>
+
+        <div class="journal-list">
+          <article class="journal-item" data-reveal>
+            <div>
+              <p>Essay · Coming soon</p>
               <h3>What makes a civilization durable?</h3>
             </div>
-            <b>↗</b>
-          </a>
-          <a class="article reveal" href="#" aria-label="Coming soon: Reproduction beyond Earth">
+            <span aria-hidden="true">↗</span>
+          </article>
+          <article class="journal-item" data-reveal>
             <div>
-              <span>Research note · Coming soon</span>
+              <p>Research note · Coming soon</p>
               <h3>Reproduction beyond Earth</h3>
             </div>
-            <b>↗</b>
-          </a>
-          <a class="article reveal" href="#" aria-label="In development: The Adjacent Possible">
+            <span aria-hidden="true">↗</span>
+          </article>
+          <article class="journal-item" data-reveal>
             <div>
-              <span>Book project · In development</span>
+              <p>Book project · In development</p>
               <h3>The Adjacent Possible</h3>
             </div>
-            <b>↗</b>
-          </a>
+            <span aria-hidden="true">↗</span>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="principles" class="section shell">
-      <div class="index">04</div>
-      <div class="section-content principles-grid">
-        <div class="reveal">
-          <p class="label">Working principles</p>
-          <h2>Ambition without illusion.</h2>
+      <section class="closing">
+        <div class="closing-signal" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="164" fill="none" stroke="#fff" stroke-opacity=".07"/>
+            <circle cx="200" cy="200" r="112" fill="none" stroke="#fff" stroke-opacity=".12"/>
+            <polygon points="200,72 311,136 311,264 200,328 89,264 89,136" fill="none" stroke="#fff" stroke-opacity=".36"/>
+            <polygon points="200,130 261,165 261,235 200,270 139,235 139,165" fill="none" stroke="#fff" stroke-opacity=".58"/>
+            <path d="M200 72V328M89 136l222 128M311 136 89 264" stroke="#fff" stroke-opacity=".28"/>
+            <circle cx="200" cy="200" r="9" fill="#d61f2c"/>
+          </svg>
         </div>
-        <ol class="principles">
-          <li class="reveal"><span>01</span><p>Seek truth without pretending to possess it.</p></li>
-          <li class="reveal"><span>02</span><p>Build before feeling fully ready; claim only what evidence supports.</p></li>
-          <li class="reveal"><span>03</span><p>Respect individual freedom while thinking beyond a single lifetime.</p></li>
-          <li class="reveal"><span>04</span><p>Measure progress by capability created, knowledge shared, and lives improved.</p></li>
-        </ol>
-      </div>
-    </section>
+        <div class="closing-copy" data-reveal>
+          <p class="eyebrow">Nexus Prima</p>
+          <h2>Build what outlives us.</h2>
+          <p>
+            A long-term project begins with disciplined questions, patient work, and the courage to think beyond a single lifetime.
+          </p>
+          <a class="button button--light" href="#top">Return to the beginning</a>
+        </div>
+      </section>
+    </main>
 
-    <section class="closing shell">
-      <div class="closing-panel reveal">
-        <p class="eyebrow">The first version begins here</p>
-        <h2>Different generations inherit different possibilities.</h2>
-        <p>Our responsibility is to understand them, test them, and expand them carefully.</p>
-        <a class="button primary" href="mailto:hello@nexusprima.org">hello@nexusprima.org</a>
-      </div>
-    </section>
-  </main>
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#top" aria-label="Nexus Prima home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".32"/>
+          <polygon points="32,8 53,20 53,44 32,56 11,44 11,20" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <polygon points="32,17 45,24.5 45,39.5 32,47 19,39.5 19,24.5" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".76"/>
+          <circle cx="32" cy="32" r="4.5" fill="#d61f2c"/>
+        </svg>
+        <span class="brand-wordmark"><span>NEXUS</span> <strong>PRIMA</strong></span>
+      </a>
 
-  <footer class="footer shell">
-    <div>
-      <strong>NEXUS PRIMA</strong>
-      <p>Building the foundations, one question at a time.</p>
-    </div>
-    <p>© <span id="year"></span> Nexus Prima</p>
-  </footer>
+      <p>Research and education for humanity's next chapter.</p>
+
+      <div class="footer-links">
+        <a href="#mission">Mission</a>
+        <a href="#focus">Focus</a>
+        <a href="#journal">Journal</a>
+      </div>
+
+      <small>© <span data-year></span> Nexus Prima. Learning in public.</small>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
