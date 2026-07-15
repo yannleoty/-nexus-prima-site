@@ -1,22 +1,18 @@
-# Nexus Prima v2
+# Nexus Prima — Final Website
 
-A static, responsive website for **Nexus Prima** using only HTML, CSS, and vanilla JavaScript.
+Static, deployment-ready website for **nexusprima.org**.
 
 ## Files
 
-- `index.html` — page structure and content
-- `styles.css` — complete red / white / black visual system
-- `script.js` — mobile menu, header behavior, and scroll reveals
-- `favicon.svg` — geometric Nexus Prima favicon
-- `robots.txt` and `sitemap.xml` — basic search-engine files
+- `index.html` — complete website content
+- `styles.css` — responsive red, white and black design
+- `script.js` — navigation, header and reveal animations
+- `favicon.svg` — site icon
+- `404.html` — custom missing-page screen
+- `robots.txt` and `sitemap.xml` — search-engine files
 
-## Publish with GitHub + Vercel
+## Deploy on GitHub
 
-1. Replace the existing repository files with these files.
-2. Commit the changes to the `main` branch.
-3. Vercel should redeploy automatically.
-4. Refresh `https://nexusprima.org` after the deployment finishes.
+Upload every file in this folder to the root of the repository, replacing the previous versions. Keep the filenames unchanged. Vercel will deploy automatically after the commit.
 
-## Before publishing
-
-Review all wording and confirm that the selected claims accurately represent the project.
+No build command or external dependency is required.
