@@ -10,8 +10,10 @@
   <meta property="og:title" content="Nexus Prima — Expanding Humanity’s Next Chapter">
   <meta property="og:description" content="A Civilization Initiative for humanity’s long-term future.">
   <meta property="og:url" content="https://nexusprima.org/">
+  <meta property="og:image" content="https://nexusprima.org/mars.webp">
   <link rel="canonical" href="https://nexusprima.org/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,8 +35,9 @@
     </button>
 
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-menu>
-      <a href="#pillars">Pillars</a>
-      <a href="#horizons">Horizons</a>
+      <a href="#humanity">Humanity</a>
+      <a href="#ai">AI</a>
+      <a href="#horizon">Horizon</a>
       <a href="#work">Current Work</a>
       <a href="#journal">Journal</a>
       <a href="#contact">Contact</a>
@@ -61,91 +64,44 @@
       </div>
     </section>
 
-    <section class="pillars" id="pillars" aria-label="Nexus Prima pillars">
-      <article class="pillar pillar--humanity">
-        <div class="pillar-image"><img src="mars.webp" alt="Mars seen from space" loading="lazy"></div>
-        <div class="pillar-copy" data-reveal>
-          <p class="eyebrow">Humanity Beyond Earth</p>
-          <h2>Humanity Multiplanetary</h2>
-          <p>Studying the scientific, technological and institutional foundations of a civilization beyond a single world.</p>
-        </div>
-      </article>
-
-      <article class="pillar pillar--consciousness">
-        <div class="pillar-image"><img src="moon.webp" alt="The Moon illuminated against deep space" loading="lazy"></div>
-        <div class="pillar-copy" data-reveal>
-          <p class="eyebrow">Consciousness</p>
-          <h2>Consciousness</h2>
-          <p>Exploring the nature of intelligence, cognition and the future relationship between biological and artificial minds.</p>
-        </div>
-      </article>
-
-      <article class="pillar pillar--energy">
-        <div class="pillar-image"><img src="earth.webp" alt="Earth seen from space" loading="lazy"></div>
-        <div class="pillar-copy" data-reveal>
-          <p class="eyebrow">Energy</p>
-          <h2>Energy</h2>
-          <p>Understanding the systems capable of sustaining civilization across centuries and eventually across worlds.</p>
-        </div>
-      </article>
-
-      <article class="pillar pillar--space">
-        <div class="pillar-image pillar-image--space"><img src="earth.webp" alt="Earth and the surrounding darkness of space" loading="lazy"></div>
-        <div class="pillar-copy" data-reveal>
-          <p class="eyebrow">Space</p>
-          <h2>Space</h2>
-          <p>Investigating the technologies, infrastructure and environments that may enable permanent human presence beyond Earth.</p>
-        </div>
-      </article>
-
-      <article class="pillar pillar--ai">
-        <div class="pillar-image pillar-image--lab" role="img" aria-label="A modern advanced laboratory represented through light, glass and data systems">
-          <div class="lab-grid"></div><div class="lab-core"></div><div class="lab-glass"></div>
-        </div>
-        <div class="pillar-copy" data-reveal>
-          <p class="eyebrow">Artificial Intelligence</p>
-          <h2>Artificial Intelligence</h2>
-          <p>Studying advanced AI, alignment, governance and human collaboration in an age of increasingly capable machines.</p>
-        </div>
-      </article>
+    <section class="feature feature--mars" id="humanity">
+      <div class="feature-image">
+        <img src="mars.webp" alt="Mars seen from space">
+      </div>
+      <div class="feature-copy" data-reveal>
+        <p class="eyebrow">Humanity Beyond Earth</p>
+        <h2>Humanity Multiplanetary</h2>
+        <p>Studying the scientific, technological and institutional foundations of a civilization beyond a single world.</p>
+      </div>
     </section>
 
-    <section class="section horizons" id="horizons">
-      <div class="section-intro" data-reveal>
-        <p class="eyebrow">Planetary Horizons</p>
-        <h2>Earth. Moon. Mars.</h2>
+    <section class="feature feature--ai" id="ai">
+      <div class="ai-visual" aria-hidden="true">
+        <div class="ai-grid"></div>
+        <div class="ai-frame"></div>
+        <div class="ai-orbit ai-orbit--one"></div>
+        <div class="ai-orbit ai-orbit--two"></div>
+        <div class="ai-core"></div>
       </div>
+      <div class="feature-copy" data-reveal>
+        <p class="eyebrow">Artificial Intelligence</p>
+        <h2>Artificial Intelligence</h2>
+        <p>Studying advanced AI, alignment, governance and human collaboration in an age of increasingly capable machines.</p>
+      </div>
+    </section>
 
-      <div class="horizon-grid">
-        <article class="horizon-card" data-reveal>
-          <div class="horizon-image"><img src="earth.webp" alt="Earth" loading="lazy"></div>
-          <div class="horizon-copy">
-            <span>01</span>
-            <p class="eyebrow">Earth</p>
-            <h3>Strengthen the Foundation</h3>
-            <p>Civilization begins on Earth. Strengthening it remains our first responsibility.</p>
-          </div>
-        </article>
-
-        <article class="horizon-card" data-reveal>
-          <div class="horizon-image"><img src="moon.webp" alt="Moon" loading="lazy"></div>
-          <div class="horizon-copy">
-            <span>02</span>
-            <p class="eyebrow">Moon</p>
-            <h3>Build the First Extension</h3>
-            <p>The Moon offers humanity its first opportunity to learn how civilization can operate beyond Earth.</p>
-          </div>
-        </article>
-
-        <article class="horizon-card horizon-card--mars" data-reveal>
-          <div class="horizon-image"><img src="mars.webp" alt="Mars" loading="lazy"></div>
-          <div class="horizon-copy">
-            <span>03</span>
-            <p class="eyebrow">Mars</p>
-            <h3>Build for Generations</h3>
-            <p>Mars represents the long-term possibility of an enduring human civilization on another world.</p>
-          </div>
-        </article>
+    <section class="section horizon" id="horizon">
+      <div class="horizon-copy" data-reveal>
+        <p class="eyebrow">Planetary Horizons</p>
+        <h2>Mars.</h2>
+        <p class="horizon-kicker">Build for Generations</p>
+        <p>Mars represents the long-term possibility of an enduring human civilization on another world.</p>
+      </div>
+      <div class="horizon-mark" aria-hidden="true">
+        <span>03</span>
+        <div class="horizon-ring horizon-ring--one"></div>
+        <div class="horizon-ring horizon-ring--two"></div>
+        <div class="horizon-dot"></div>
       </div>
     </section>
 

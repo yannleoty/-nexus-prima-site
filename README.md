@@ -1,5 +1,13 @@
-# Nexus Prima — definitive website package
+# Nexus Prima — clean final website
 
-Upload every file in this folder to the root of the GitHub repository.
+Upload all 14 files from this folder to the root of the GitHub repository.
 
-This version preserves the premium full-screen layout and contains the definitive Nexus Prima text, all five pillars, Planetary Horizons, Current Work, Journal, and contact@nexusprima.org.
+This version contains:
+- the original Nexus Prima introduction;
+- one image only: `mars.webp`;
+- Humanity Multiplanetary;
+- Artificial Intelligence with a CSS-built visual;
+- a text-only Mars horizon;
+- Current Work, Journal and contact@nexusprima.org.
+
+There are no references to Earth or Moon image files, so no broken-image question marks should appear.
