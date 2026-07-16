@@ -1,0 +1,27 @@
+NEXUS PRIMA — FINAL FIXED PACKAGE
+
+Upload ALL files in this folder to the ROOT of the GitHub repository.
+
+IMPORTANT:
+- index.html must be at the root.
+- styles.css must be at the root.
+- earth.webp, moon.webp and mars.webp must be at the root.
+- Do not upload the ZIP file itself to GitHub.
+- Replace the old files when GitHub asks.
+
+This version also embeds the full CSS inside index.html, so the design remains styled
+even if the external stylesheet is delayed or accidentally omitted.
+
+Required files:
+404.html
+README.md
+UPLOAD-INSTRUCTIONS.txt
+earth.webp
+favicon.svg
+index.html
+mars.webp
+moon.webp
+robots.txt
+script.js
+sitemap.xml
+styles.css
