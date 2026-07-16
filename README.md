@@ -1,17 +1,12 @@
-# Nexus Prima — Final Website
+# Nexus Prima — minimal final website
 
-A concise, responsive, GitHub Pages and Vercel-ready static website.
+Upload every file in this package to the root of the GitHub repository.
 
-## Files
-- `index.html`
-- `styles.css`
-- `script.js`
-- `earth.webp`
-- `moon.webp`
-- `mars.webp`
-- `favicon.svg`
-- `404.html`
-- `robots.txt`
-- `sitemap.xml`
+Homepage sequence:
+1. Sacred Nexus Prima hero text
+2. Mars / Humanity Multiplanetary
+3. Space
+4. Current Work: Possible Adjacent, Mars City, Journal
+5. Contact: contact@nexusprima.org
 
-Upload these files directly to the root of the repository. Do not upload the ZIP itself into GitHub.
+The package contains 14 root-level files, including the CNAME for nexusprima.org.
