@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://nexusprima.org/">
   <link rel="canonical" href="https://nexusprima.org/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=minimal-2026">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,9 +33,10 @@
     </button>
 
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-menu>
-      <a href="#mars">Mars</a>
-      <a href="#space">Space</a>
+      <a href="#pillars">Pillars</a>
+      <a href="#horizons">Horizons</a>
       <a href="#work">Current Work</a>
+      <a href="#journal">Journal</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -60,9 +61,9 @@
       </div>
     </section>
 
-    <section class="pillars" aria-label="Nexus Prima vision">
-      <article class="pillar pillar--humanity" id="mars">
-        <div class="pillar-image"><img src="mars.webp" alt="A luminous holographic visualization of Mars" loading="eager"></div>
+    <section class="pillars" id="pillars" aria-label="Nexus Prima pillars">
+      <article class="pillar pillar--humanity">
+        <div class="pillar-image"><img src="mars.webp" alt="Mars seen from space" loading="lazy"></div>
         <div class="pillar-copy" data-reveal>
           <p class="eyebrow">Humanity Beyond Earth</p>
           <h2>Humanity Multiplanetary</h2>
@@ -70,26 +71,101 @@
         </div>
       </article>
 
-      <article class="pillar pillar--space" id="space">
-        <div class="pillar-image pillar-image--space-clean"><img src="space.webp" alt="Earth, the Moon and deep space" loading="lazy"></div>
+      <article class="pillar pillar--consciousness">
+        <div class="pillar-image"><img src="moon.webp" alt="The Moon illuminated against deep space" loading="lazy"></div>
+        <div class="pillar-copy" data-reveal>
+          <p class="eyebrow">Consciousness</p>
+          <h2>Consciousness</h2>
+          <p>Exploring the nature of intelligence, cognition and the future relationship between biological and artificial minds.</p>
+        </div>
+      </article>
+
+      <article class="pillar pillar--energy">
+        <div class="pillar-image"><img src="earth.webp" alt="Earth seen from space" loading="lazy"></div>
+        <div class="pillar-copy" data-reveal>
+          <p class="eyebrow">Energy</p>
+          <h2>Energy</h2>
+          <p>Understanding the systems capable of sustaining civilization across centuries and eventually across worlds.</p>
+        </div>
+      </article>
+
+      <article class="pillar pillar--space">
+        <div class="pillar-image pillar-image--space"><img src="earth.webp" alt="Earth and the surrounding darkness of space" loading="lazy"></div>
         <div class="pillar-copy" data-reveal>
           <p class="eyebrow">Space</p>
           <h2>Space</h2>
-          <p>Investigating the environments, technologies and infrastructure that may enable permanent human presence beyond Earth.</p>
+          <p>Investigating the technologies, infrastructure and environments that may enable permanent human presence beyond Earth.</p>
         </div>
       </article>
+
+      <article class="pillar pillar--ai">
+        <div class="pillar-image pillar-image--lab" role="img" aria-label="A modern advanced laboratory represented through light, glass and data systems">
+          <div class="lab-grid"></div><div class="lab-core"></div><div class="lab-glass"></div>
+        </div>
+        <div class="pillar-copy" data-reveal>
+          <p class="eyebrow">Artificial Intelligence</p>
+          <h2>Artificial Intelligence</h2>
+          <p>Studying advanced AI, alignment, governance and human collaboration in an age of increasingly capable machines.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section horizons" id="horizons">
+      <div class="section-intro" data-reveal>
+        <p class="eyebrow">Planetary Horizons</p>
+        <h2>Earth. Moon. Mars.</h2>
+      </div>
+
+      <div class="horizon-grid">
+        <article class="horizon-card" data-reveal>
+          <div class="horizon-image"><img src="earth.webp" alt="Earth" loading="lazy"></div>
+          <div class="horizon-copy">
+            <span>01</span>
+            <p class="eyebrow">Earth</p>
+            <h3>Strengthen the Foundation</h3>
+            <p>Civilization begins on Earth. Strengthening it remains our first responsibility.</p>
+          </div>
+        </article>
+
+        <article class="horizon-card" data-reveal>
+          <div class="horizon-image"><img src="moon.webp" alt="Moon" loading="lazy"></div>
+          <div class="horizon-copy">
+            <span>02</span>
+            <p class="eyebrow">Moon</p>
+            <h3>Build the First Extension</h3>
+            <p>The Moon offers humanity its first opportunity to learn how civilization can operate beyond Earth.</p>
+          </div>
+        </article>
+
+        <article class="horizon-card horizon-card--mars" data-reveal>
+          <div class="horizon-image"><img src="mars.webp" alt="Mars" loading="lazy"></div>
+          <div class="horizon-copy">
+            <span>03</span>
+            <p class="eyebrow">Mars</p>
+            <h3>Build for Generations</h3>
+            <p>Mars represents the long-term possibility of an enduring human civilization on another world.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="section work" id="work">
       <div class="section-intro" data-reveal>
         <p class="eyebrow">Current Work</p>
-        <h2>Current Work</h2>
+        <h2>Ideas under development.</h2>
       </div>
       <ul class="work-list" data-reveal>
-        <li>Possible Adjacent</li>
+        <li>The Adjacent Possible</li>
         <li>Mars City</li>
         <li>Journal</li>
       </ul>
+    </section>
+
+    <section class="section journal" id="journal">
+      <div data-reveal>
+        <p class="eyebrow">Journal</p>
+        <h2>Research, essays and conversations published as the initiative evolves.</h2>
+      </div>
     </section>
 
     <section class="closing" id="contact">
