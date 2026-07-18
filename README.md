@@ -1,13 +1,20 @@
-# Nexus Prima — final definitive website
+# Nexus Prima — Final Definitive Clean Build
 
-Upload every file in this folder to the root of the GitHub repository.
+Deployment-ready static website for `nexusprima.org`.
 
-This version keeps the website deliberately simple:
+This build preserves:
 
-- the original Nexus Prima hero;
-- one image only: `mars.webp`, attached to Humanity Multiplanetary;
-- five clear pillars: Humanity Multiplanetary, Artificial Intelligence, Civilization, Space Infrastructure and Consciousness;
-- no separate Mars horizon section;
-- no Artificial Intelligence visual/logo;
-- no standalone “One connected future” or five-pillars introduction block;
-- Current Work, Journal and `contact@nexusprima.org`.
+- the Mars image inside Humanity Multiplanetary;
+- the five pillars;
+- Current Work, Journal and Contact;
+- the responsive mobile layout.
+
+Removed from the visible homepage:
+
+- the AI visual/logo;
+- the standalone Five Pillars introduction block;
+- “One connected future”;
+- the repeated “Nexus Prima explores the systems…” paragraph;
+- the redundant “Building humanity beyond Earth.” line.
+
+Upload the files from this folder to the repository root.
