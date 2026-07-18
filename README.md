@@ -1,13 +1,15 @@
-# Nexus Prima — clean final website
+# Nexus Prima — Five Pillars final website
 
-Upload all 14 files from this folder to the root of the GitHub repository.
+Upload every file in this archive to the root of the GitHub repository.
 
-This version contains:
-- the original Nexus Prima introduction;
-- one image only: `mars.webp`;
-- Humanity Multiplanetary;
-- Artificial Intelligence with a CSS-built visual;
-- a text-only Mars horizon;
-- Current Work, Journal and contact@nexusprima.org.
+This version keeps the clean black, white and red identity and includes:
 
-There are no references to Earth or Moon image files, so no broken-image question marks should appear.
+- the original hero and introduction;
+- the Mars image for Humanity Multiplanetary;
+- Artificial Intelligence with the CSS-built visual;
+- the five final pillars: Humanity Multiplanetary, Artificial Intelligence, Civilization, Space Infrastructure and Consciousness;
+- no separate Mars-only homepage section;
+- Current Work, Journal and contact@nexusprima.org;
+- favicon, manifest, sitemap, robots file and custom 404 page.
+
+The only photographic image used by the homepage is `mars.webp`.
