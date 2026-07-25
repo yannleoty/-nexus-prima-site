@@ -1,15 +1,20 @@
-# Nexus Prima — Journal Build
+# Nexus Prima — Final Definitive Clean Build
 
 Deployment-ready static website for `nexusprima.org`.
 
-This build preserves the concise homepage and five pillars, and adds:
+This build preserves:
 
-- `https://nexusprima.org/journal/`
-- `https://nexusprima.org/journal/mars-city/`
-- Nexus Prima Journal — Article 001, “Mars City”
-- the approved Mars article image
-- responsive article typography and navigation
-- linked citations and a complete references section
-- updated homepage links and sitemap
+- the Mars image inside Humanity Multiplanetary;
+- the five pillars;
+- Current Work, Journal and Contact;
+- the responsive mobile layout.
 
-Upload the contents of this folder to the repository root.
+Removed from the visible homepage:
+
+- the AI visual/logo;
+- the standalone Five Pillars introduction block;
+- “One connected future”;
+- the repeated “Nexus Prima explores the systems…” paragraph;
+- the redundant “Building humanity beyond Earth.” line.
+
+Upload the files from this folder to the repository root.
