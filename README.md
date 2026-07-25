@@ -18,3 +18,12 @@ Removed from the visible homepage:
 - the redundant “Building humanity beyond Earth.” line.
 
 Upload the files from this folder to the repository root.
+
+## Current Work update
+
+The “Ideas under development” list contains only:
+
+- The Adjacent Possible
+- Journal — linked to https://journal.nexusprima.org
+
+The header Journal navigation item and the Journal feature section also link to the Journal subdomain.
