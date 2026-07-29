@@ -103,7 +103,7 @@
     .desktop-navigation {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 34px;
     }
 
     .desktop-navigation a {
@@ -132,7 +132,9 @@
       width: 40px;
       height: 2px;
       background: var(--text);
-      transition: transform 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        top 0.2s ease;
     }
 
     .menu-button span:first-child {
@@ -141,6 +143,16 @@
 
     .menu-button span:last-child {
       top: 28px;
+    }
+
+    .menu-button.open span:first-child {
+      top: 21px;
+      transform: rotate(45deg);
+    }
+
+    .menu-button.open span:last-child {
+      top: 21px;
+      transform: rotate(-45deg);
     }
 
     .mobile-navigation {
@@ -156,12 +168,17 @@
 
     .mobile-navigation a {
       display: block;
-      padding: 17px 0;
+      padding: 22px 0;
       color: var(--muted);
+      font-size: 1.15rem;
       border-bottom: 1px solid var(--border);
     }
 
-    /* General sections */
+    .mobile-navigation a:hover {
+      color: var(--text);
+    }
+
+    /* General */
 
     section {
       border-bottom: 1px solid var(--border);
@@ -222,19 +239,9 @@
       line-height: 1.65;
     }
 
-    .scroll-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-top: 44px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--red);
-      font-weight: 700;
-    }
+    /* Pillars */
 
-    /* Areas */
-
-    .areas {
+    .pillars {
       padding: 0;
     }
 
@@ -276,7 +283,7 @@
       margin-top: 24px;
     }
 
-    /* Current work */
+    /* Current Work */
 
     .current-work {
       padding: 120px 0;
@@ -370,7 +377,7 @@
       font-size: 0.9rem;
     }
 
-    /* Mobile */
+    /* Tablet */
 
     @media (max-width: 850px) {
       .desktop-navigation {
@@ -394,6 +401,8 @@
         grid-column: 2;
       }
     }
+
+    /* Mobile */
 
     @media (max-width: 650px) {
       .container {
@@ -531,17 +540,8 @@
       </a>
 
       <div class="desktop-navigation">
-        <a href="#civilisation">Civilisation</a>
+        <a href="#pillars">Pillars</a>
         <a href="#current-work">Current Work</a>
-
-        <a href="https://journal.nexusprima.org">
-          Journal
-        </a>
-
-        <a href="https://systems.nexusprima.org">
-          Systems
-        </a>
-
         <a href="#contact">Contact</a>
       </div>
 
@@ -561,17 +561,8 @@
       class="mobile-navigation"
       id="mobileNavigation"
     >
-      <a href="#civilisation">Civilisation</a>
+      <a href="#pillars">Pillars</a>
       <a href="#current-work">Current Work</a>
-
-      <a href="https://journal.nexusprima.org">
-        Journal
-      </a>
-
-      <a href="https://systems.nexusprima.org">
-        Systems
-      </a>
-
       <a href="#contact">Contact</a>
     </div>
   </header>
@@ -596,20 +587,12 @@
           species.
         </p>
 
-        <a
-          class="scroll-link"
-          href="#civilisation"
-        >
-          Explore
-          <span>↓</span>
-        </a>
-
       </div>
     </section>
 
     <section
-      class="areas"
-      id="civilisation"
+      class="pillars"
+      id="pillars"
     >
       <div class="container">
 
@@ -726,8 +709,8 @@
 
             <p class="area-description">
               Exploring consciousness, psychology, creativity, ethics and
-              meaning—because humanity’s future depends not only on
-              technology, but also on the people who create and use it.
+              meaning—because humanity’s future depends not only on technology,
+              but also on the people who create and use it.
             </p>
           </div>
 
@@ -826,9 +809,24 @@
     const mobileNavigation =
       document.getElementById("mobileNavigation");
 
+    function closeMenu() {
+      mobileNavigation.classList.remove("open");
+      menuButton.classList.remove("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    }
+
     menuButton.addEventListener("click", () => {
       const isOpen =
         mobileNavigation.classList.toggle("open");
+
+      menuButton.classList.toggle(
+        "open",
+        isOpen
+      );
 
       menuButton.setAttribute(
         "aria-expanded",
@@ -839,14 +837,10 @@
     mobileNavigation
       .querySelectorAll("a")
       .forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileNavigation.classList.remove("open");
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-        });
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
       });
   </script>
 
