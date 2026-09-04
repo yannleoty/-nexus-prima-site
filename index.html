@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Nexus Prima</title>
-  <meta name="description" content="A civilisation initiative studying the systems, technologies and ideas that may help humanity build across generations as a multi-planetary species.">
+
+  <meta
+    name="description"
+    content="A civilisation initiative studying the systems, technologies and ideas that may help humanity build across generations as a multi-planetary species."
+  >
 
   <!-- Canonical domain -->
   <link rel="canonical" href="https://nexusprima.org/">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+  <link
+    rel="icon"
+    href="/favicon.svg"
+    type="image/svg+xml"
+    sizes="any"
+  >
 
   <!-- Web application metadata -->
   <link rel="manifest" href="/site.webmanifest">
@@ -20,7 +30,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nexus Prima">
   <meta property="og:title" content="Nexus Prima">
-  <meta property="og:description" content="A civilisation initiative studying the systems, technologies and ideas that may help humanity build across generations as a multi-planetary species.">
+
+  <meta
+    property="og:description"
+    content="A civilisation initiative studying the systems, technologies and ideas that may help humanity build across generations as a multi-planetary species."
+  >
+
   <meta property="og:url" content="https://nexusprima.org/">
 
   <!-- Preferred site name for search engines -->
@@ -150,11 +165,18 @@
       width: 40px;
       height: 2px;
       background: var(--text);
-      transition: transform 0.2s ease, top 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        top 0.2s ease;
     }
 
-    .menu-button span:first-child { top: 14px; }
-    .menu-button span:last-child { top: 28px; }
+    .menu-button span:first-child {
+      top: 14px;
+    }
+
+    .menu-button span:last-child {
+      top: 28px;
+    }
 
     .menu-button.open span:first-child {
       top: 21px;
@@ -173,7 +195,9 @@
       background: var(--background);
     }
 
-    .mobile-navigation.open { display: block; }
+    .mobile-navigation.open {
+      display: block;
+    }
 
     .mobile-navigation a {
       display: block;
@@ -183,11 +207,15 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .mobile-navigation a:hover { color: var(--text); }
+    .mobile-navigation a:hover {
+      color: var(--text);
+    }
 
     /* General */
 
-    section { border-bottom: 1px solid var(--border); }
+    section {
+      border-bottom: 1px solid var(--border);
+    }
 
     .eyebrow {
       color: var(--red);
@@ -233,7 +261,9 @@
       align-items: center;
     }
 
-    .hero-content { padding: 120px 0; }
+    .hero-content {
+      padding: 120px 0;
+    }
 
     .hero-description {
       max-width: 850px;
@@ -244,7 +274,9 @@
 
     /* Pillars */
 
-    .pillars { padding: 0; }
+    .pillars {
+      padding: 0;
+    }
 
     .area {
       display: grid;
@@ -255,7 +287,9 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .area:last-child { border-bottom: 0; }
+    .area:last-child {
+      border-bottom: 0;
+    }
 
     .area-number {
       color: var(--red);
@@ -264,8 +298,13 @@
       letter-spacing: 0.26rem;
     }
 
-    .area-title { padding-right: 20px; }
-    .area-copy { max-width: 650px; }
+    .area-title {
+      padding-right: 20px;
+    }
+
+    .area-copy {
+      max-width: 650px;
+    }
 
     .area-statement {
       color: var(--text);
@@ -273,9 +312,11 @@
       line-height: 1.4;
     }
 
-    .area-description { margin-top: 24px; }
+    .area-description {
+      margin-top: 24px;
+    }
 
-    /* Phase 2: horizontal pillar images. */
+    /* Horizontal pillar images */
 
     .area-media {
       grid-column: 2 / -1;
@@ -297,7 +338,8 @@
       position: relative;
     }
 
-    /* Frame only the artwork inside the original phone screenshot. */
+    /* Frame the artwork within the AI screenshot */
+
     .ai-crop {
       position: absolute;
       top: 0;
@@ -319,8 +361,13 @@
 
     /* Current Work */
 
-    .current-work { padding: 120px 0; }
-    .current-work h2 { margin-top: 28px; }
+    .current-work {
+      padding: 120px 0;
+    }
+
+    .current-work h2 {
+      margin-top: 28px;
+    }
 
     .work-links {
       margin-top: 70px;
@@ -335,7 +382,9 @@
       min-height: 155px;
       padding: 30px 4px;
       border-bottom: 1px solid var(--border);
-      transition: background 0.2s ease, padding 0.2s ease;
+      transition:
+        background 0.2s ease,
+        padding 0.2s ease;
     }
 
     .work-link:hover {
@@ -363,7 +412,9 @@
       align-items: center;
     }
 
-    .closing-content { padding: 120px 0; }
+    .closing-content {
+      padding: 120px 0;
+    }
 
     .closing h2 {
       max-width: 940px;
@@ -378,7 +429,9 @@
 
     /* Footer */
 
-    footer { padding: 55px 0; }
+    footer {
+      padding: 55px 0;
+    }
 
     .footer-content {
       display: flex;
@@ -403,23 +456,38 @@
     /* Tablet */
 
     @media (max-width: 850px) {
-      .desktop-navigation { display: none; }
-      .menu-button { display: block; }
+      .desktop-navigation {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
 
       .area {
         grid-template-columns: 70px 1fr;
         gap: 25px;
       }
 
-      .area-title { padding-right: 0; }
-      .area-copy { grid-column: 2; }
+      .area-title {
+        padding-right: 0;
+      }
+
+      .area-copy {
+        grid-column: 2;
+      }
     }
 
     /* Mobile */
 
     @media (max-width: 650px) {
-      .container { width: min(100% - 40px, var(--max-width)); }
-      nav { min-height: 84px; }
+      .container {
+        width: min(100% - 40px, var(--max-width));
+      }
+
+      nav {
+        min-height: 84px;
+      }
 
       .symbol {
         width: 42px;
@@ -431,10 +499,21 @@
         letter-spacing: 0.2rem;
       }
 
-      .hero { min-height: calc(100vh - 84px); }
-      .hero-content { padding: 90px 0; }
-      h1 { font-size: clamp(3.15rem, 16vw, 5rem); }
-      .hero-description { margin-top: 34px; }
+      .hero {
+        min-height: calc(100vh - 84px);
+      }
+
+      .hero-content {
+        padding: 90px 0;
+      }
+
+      h1 {
+        font-size: clamp(3.15rem, 16vw, 5rem);
+      }
+
+      .hero-description {
+        margin-top: 34px;
+      }
 
       .area {
         grid-template-columns: 1fr;
@@ -442,15 +521,41 @@
         padding: 75px 0;
       }
 
-      .area-copy { grid-column: auto; }
-      .area-number { margin-bottom: 8px; }
-      .area-statement { margin-top: 12px; }
-      .area-media { grid-column: 1 / -1; }
-      .current-work { padding: 90px 0; }
-      .work-links { margin-top: 50px; }
-      .work-link { min-height: 125px; }
-      .closing { min-height: 60vh; }
-      .closing-content { padding: 100px 0; }
+      .area-copy {
+        grid-column: auto;
+      }
+
+      .area-number {
+        margin-bottom: 8px;
+      }
+
+      .area-statement {
+        margin-top: 12px;
+      }
+
+      .area-media {
+        grid-column: 1 / -1;
+      }
+
+      .current-work {
+        padding: 90px 0;
+      }
+
+      .work-links {
+        margin-top: 50px;
+      }
+
+      .work-link {
+        min-height: 125px;
+      }
+
+      .closing {
+        min-height: 60vh;
+      }
+
+      .closing-content {
+        padding: 100px 0;
+      }
 
       .footer-content {
         flex-direction: column;
@@ -461,16 +566,55 @@
 </head>
 
 <body>
+
   <header>
     <nav class="container">
-      <a class="brand" href="#top" aria-label="Nexus Prima home">
-        <svg class="symbol" viewBox="0 0 100 100" role="img" aria-label="Nexus Prima symbol">
-          <circle cx="50" cy="50" r="44" fill="none" stroke="#505057" stroke-width="2.2" />
-          <polygon points="50,7 87,28 87,72 50,93 13,72 13,28" fill="none" stroke="#f4f4f4" stroke-width="3" />
-          <polygon points="50,27 70,39 70,61 50,73 30,61 30,39" fill="none" stroke="#b8b8bd" stroke-width="2.5" />
-          <circle cx="50" cy="50" r="7" fill="#ef3348" />
+
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Nexus Prima home"
+      >
+        <svg
+          class="symbol"
+          viewBox="0 0 100 100"
+          role="img"
+          aria-label="Nexus Prima symbol"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="44"
+            fill="none"
+            stroke="#505057"
+            stroke-width="2.2"
+          />
+
+          <polygon
+            points="50,7 87,28 87,72 50,93 13,72 13,28"
+            fill="none"
+            stroke="#f4f4f4"
+            stroke-width="3"
+          />
+
+          <polygon
+            points="50,27 70,39 70,61 50,73 30,61 30,39"
+            fill="none"
+            stroke="#b8b8bd"
+            stroke-width="2.5"
+          />
+
+          <circle
+            cx="50"
+            cy="50"
+            r="7"
+            fill="#ef3348"
+          />
         </svg>
-        <div class="wordmark">NEXUS <span>PRIMA</span></div>
+
+        <div class="wordmark">
+          NEXUS <span>PRIMA</span>
+        </div>
       </a>
 
       <div class="desktop-navigation">
@@ -479,13 +623,22 @@
         <a href="#contact">Contact</a>
       </div>
 
-      <button class="menu-button" id="menuButton" aria-label="Open navigation menu" aria-expanded="false">
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
       </button>
+
     </nav>
 
-    <div class="mobile-navigation" id="mobileNavigation">
+    <div
+      class="mobile-navigation"
+      id="mobileNavigation"
+    >
       <a href="#pillars">Pillars</a>
       <a href="#current-work">Current Work</a>
       <a href="#contact">Contact</a>
@@ -493,78 +646,163 @@
   </header>
 
   <main id="top">
+
     <section class="hero">
       <div class="container hero-content">
-        <div class="eyebrow">Nexus Prima</div>
-        <h1>Expanding Humanity’s Next Chapter</h1>
+
+        <div class="eyebrow">
+          Nexus Prima
+        </div>
+
+        <h1>
+          Expanding Humanity’s Next Chapter
+        </h1>
+
         <p class="hero-description">
           A civilisation initiative dedicated to studying the knowledge,
           systems, institutions, technologies and ideas that may help humanity
           survive, cooperate and build across generations as a multi-planetary
           species.
         </p>
+
       </div>
     </section>
 
-    <section class="pillars" id="pillars">
+    <section
+      class="pillars"
+      id="pillars"
+    >
       <div class="container">
+
+        <!-- 01: Civilisation -->
+
         <article class="area">
-          <div class="area-number">01</div>
-          <div class="area-title"><h3>Civilisation</h3></div>
+
+          <div class="area-number">
+            01
+          </div>
+
+          <div class="area-title">
+            <h3>Civilisation</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">Designing societies that endure.</p>
+            <p class="area-statement">
+              Designing societies that endure.
+            </p>
+
             <p class="area-description">
               Researching governance, institutions, economics, education and
               long-term decision-making to help humanity build resilient and
               flourishing civilisations.
             </p>
           </div>
+
           <figure class="area-media">
-            <img src="./np-civilisation.jpg" width="1536" height="864" loading="lazy" decoding="async"
-              alt="Concept illustration of interconnected future settlements across the surface of Mars, viewed from above.">
+            <img
+              src="./0249869E-B0FE-485C-8C39-8F6CE053E057.png"
+              width="1536"
+              height="864"
+              loading="lazy"
+              decoding="async"
+              alt="Concept illustration of interconnected future settlements across the surface of Mars, viewed from above."
+            >
           </figure>
+
         </article>
 
+        <!-- 02: Artificial Intelligence -->
+
         <article class="area">
-          <div class="area-number">02</div>
-          <div class="area-title"><h3>Artificial Intelligence</h3></div>
+
+          <div class="area-number">
+            02
+          </div>
+
+          <div class="area-title">
+            <h3>Artificial Intelligence</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">Intelligence that amplifies humanity.</p>
+            <p class="area-statement">
+              Intelligence that amplifies humanity.
+            </p>
+
             <p class="area-description">
               Exploring how AI can accelerate scientific discovery,
               engineering, education, governance and the responsible
               development of future civilisations.
             </p>
           </div>
+
           <figure class="area-media area-media--ai">
             <div class="ai-crop">
-              <img src="./np-ai.png" width="1290" height="2796" loading="lazy" decoding="async"
-                alt="Abstract representation of artificial intelligence: a red central point within a dark sphere and geometric rings.">
+              <img
+                src="./IMG_2225.jpeg"
+                width="1290"
+                height="2796"
+                loading="lazy"
+                decoding="async"
+                alt="Abstract representation of artificial intelligence: a red central point within a dark sphere and geometric rings."
+              >
             </div>
           </figure>
+
         </article>
 
+        <!-- 03: Energy Systems -->
+
         <article class="area">
-          <div class="area-number">03</div>
-          <div class="area-title"><h3>Energy Systems</h3></div>
+
+          <div class="area-number">
+            03
+          </div>
+
+          <div class="area-title">
+            <h3>Energy Systems</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">Powering the future of civilisation.</p>
+            <p class="area-statement">
+              Powering the future of civilisation.
+            </p>
+
             <p class="area-description">
               Exploring advanced energy production, storage, distribution and
               resilience to support sustainable societies on Earth and beyond.
             </p>
           </div>
+
           <figure class="area-media">
-            <img src="./np-energy-systems.jpg" width="1536" height="864" loading="lazy" decoding="async"
-              alt="Concept illustration of solar arrays and energy storage infrastructure supplying a future Mars settlement.">
+            <img
+              src="./54F86752-AB64-4E8E-B0FC-A21376012DAE.png"
+              width="1536"
+              height="864"
+              loading="lazy"
+              decoding="async"
+              alt="Concept illustration of solar arrays and energy storage infrastructure supplying a future Mars settlement."
+            >
           </figure>
+
         </article>
 
+        <!-- 04: Space -->
+
         <article class="area">
-          <div class="area-number">04</div>
-          <div class="area-title"><h3>Space</h3></div>
+
+          <div class="area-number">
+            04
+          </div>
+
+          <div class="area-title">
+            <h3>Space</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">Connecting worlds beyond Earth.</p>
+            <p class="area-statement">
+              Connecting worlds beyond Earth.
+            </p>
+
             <p class="area-description">
               Developing ideas for spaceports, orbital habitats,
               transportation networks, human reproduction and birth in space,
@@ -572,17 +810,37 @@
               a sustainable interplanetary civilisation.
             </p>
           </div>
+
           <figure class="area-media">
-            <img src="./np-space.jpg" width="1536" height="864" loading="lazy" decoding="async"
-              alt="Concept illustration of a modular orbital outpost with solar arrays above Earth's curved horizon.">
+            <img
+              src="./F2708EEF-A414-439E-8EAF-8474DA84B319.png"
+              width="1536"
+              height="864"
+              loading="lazy"
+              decoding="async"
+              alt="Concept illustration of a modular orbital outpost with solar arrays above Earth's curved horizon."
+            >
           </figure>
+
         </article>
 
+        <!-- 05: Biotechnology -->
+
         <article class="area">
-          <div class="area-number">05</div>
-          <div class="area-title"><h3>Biotechnology</h3></div>
+
+          <div class="area-number">
+            05
+          </div>
+
+          <div class="area-title">
+            <h3>Biotechnology</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">The biological foundations of civilisation.</p>
+            <p class="area-statement">
+              The biological foundations of civilisation.
+            </p>
+
             <p class="area-description">
               Exploring genetics, synthetic biology, cellular engineering,
               medicine, longevity, food systems and space biology to help
@@ -590,94 +848,190 @@
               on Earth and beyond.
             </p>
           </div>
+
           <figure class="area-media">
-            <img src="./np-biotechnology.jpg" width="1536" height="864" loading="lazy" decoding="async"
-              alt="Illustration of a biotechnology laboratory with glass bioreactors, plant cultures, a microscope and culture trays.">
+            <img
+              src="./7514AED5-048C-40E7-8CFC-26F1FA87574D.png"
+              width="1536"
+              height="864"
+              loading="lazy"
+              decoding="async"
+              alt="Illustration of a biotechnology laboratory with glass bioreactors, plant cultures, a microscope and culture trays."
+            >
           </figure>
+
         </article>
 
+        <!-- 06: Consciousness -->
+
         <article class="area">
-          <div class="area-number">06</div>
-          <div class="area-title"><h3>Consciousness</h3></div>
+
+          <div class="area-number">
+            06
+          </div>
+
+          <div class="area-title">
+            <h3>Consciousness</h3>
+          </div>
+
           <div class="area-copy">
-            <p class="area-statement">Understanding the human experience.</p>
+            <p class="area-statement">
+              Understanding the human experience.
+            </p>
+
             <p class="area-description">
               Exploring consciousness, psychology, creativity, ethics and
               meaning—because humanity’s future depends not only on technology,
               but also on the people who create and use it.
             </p>
           </div>
+
           <figure class="area-media">
-            <img src="./np-consciousness.jpg" width="1536" height="864" loading="lazy" decoding="async"
-              alt="Illustrative rendering of a translucent human brain with fine white pathways and subtle red highlights.">
+            <img
+              src="./39276F83-69BE-4F87-B70F-FDDFA4389CDC.png"
+              width="1536"
+              height="864"
+              loading="lazy"
+              decoding="async"
+              alt="Illustrative rendering of a translucent human brain with fine white pathways and subtle red highlights."
+            >
           </figure>
+
         </article>
+
       </div>
     </section>
 
-    <section class="current-work" id="current-work">
+    <section
+      class="current-work"
+      id="current-work"
+    >
       <div class="container">
-        <div class="eyebrow">Current Work</div>
-        <h2>Ideas under development.</h2>
-        <div class="work-links">
-          <a class="work-link" href="https://journal.nexusprima.org">
-            <div class="work-link-title">Journal</div>
-            <div class="work-arrow">→</div>
-          </a>
-          <a class="work-link" href="https://systems.nexusprima.org">
-            <div class="work-link-title">Systems</div>
-            <div class="work-arrow">→</div>
-          </a>
+
+        <div class="eyebrow">
+          Current Work
         </div>
+
+        <h2>
+          Ideas under development.
+        </h2>
+
+        <div class="work-links">
+
+          <a
+            class="work-link"
+            href="https://journal.nexusprima.org"
+          >
+            <div class="work-link-title">
+              Journal
+            </div>
+
+            <div class="work-arrow">
+              →
+            </div>
+          </a>
+
+          <a
+            class="work-link"
+            href="https://systems.nexusprima.org"
+          >
+            <div class="work-link-title">
+              Systems
+            </div>
+
+            <div class="work-arrow">
+              →
+            </div>
+          </a>
+
+        </div>
+
       </div>
     </section>
 
     <section class="closing">
       <div class="container closing-content">
+
         <h2>
           Civilisation is built.
           <span>Generation after generation.</span>
         </h2>
+
       </div>
     </section>
+
   </main>
 
   <footer id="contact">
     <div class="container footer-content">
+
       <div>
-        <div class="wordmark">NEXUS <span>PRIMA</span></div>
-        <a class="footer-contact" href="mailto:contact@nexusprima.org">contact@nexusprima.org</a>
+        <div class="wordmark">
+          NEXUS <span>PRIMA</span>
+        </div>
+
+        <a
+          class="footer-contact"
+          href="mailto:contact@nexusprima.org"
+        >
+          contact@nexusprima.org
+        </a>
       </div>
+
       <div class="copyright">
         <div>© 2026 Nexus Prima</div>
+
         <div class="footer-legal">
           <a href="/legal/">Legal Notice</a>
           <span>·</span>
           <a href="/privacy/">Privacy</a>
         </div>
       </div>
+
     </div>
   </footer>
 
   <script>
-    const menuButton = document.getElementById("menuButton");
-    const mobileNavigation = document.getElementById("mobileNavigation");
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileNavigation =
+      document.getElementById("mobileNavigation");
 
     function closeMenu() {
       mobileNavigation.classList.remove("open");
       menuButton.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
     }
 
     menuButton.addEventListener("click", () => {
-      const isOpen = mobileNavigation.classList.toggle("open");
-      menuButton.classList.toggle("open", isOpen);
-      menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      const isOpen =
+        mobileNavigation.classList.toggle("open");
+
+      menuButton.classList.toggle(
+        "open",
+        isOpen
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
     });
 
-    mobileNavigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
+    mobileNavigation
+      .querySelectorAll("a")
+      .forEach((link) => {
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
+      });
   </script>
+
 </body>
 </html>
