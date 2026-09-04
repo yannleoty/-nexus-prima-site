@@ -332,31 +332,31 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      object-position: center;
     }
+
+    /* Display the complete AI artwork */
 
     .area-media--ai {
       position: relative;
     }
 
-    /* Frame the artwork within the AI screenshot */
-
     .ai-crop {
       position: absolute;
-      top: 0;
-      left: 50%;
-      width: 68.94426%;
+      inset: 0;
+      width: 100%;
       height: 100%;
-      transform: translateX(-50%);
+      transform: none;
       overflow: hidden;
     }
 
     .ai-crop img {
-      position: absolute;
-      width: 104.18964%;
-      height: auto;
-      max-width: none;
-      left: -1.76406%;
-      top: -90.54054%;
+      position: static;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
 
     /* Current Work */
@@ -739,8 +739,6 @@
             <div class="ai-crop">
               <img
                 src="./IMG_2225.jpeg"
-                width="1290"
-                height="2796"
                 loading="lazy"
                 decoding="async"
                 alt="Abstract representation of artificial intelligence: a red central point within a dark sphere and geometric rings."
