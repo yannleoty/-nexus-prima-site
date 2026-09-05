@@ -1,6 +1,6 @@
 # Nexus Prima — Phase 3
 
-This update adds Earth → Solar System → Galactic → Universal between the introduction and the six pillars. Scroll down to advance; scroll up to reverse. The four chapter buttons move to a horizon, and “Continue to the pillars” skips the journey.
+This update adds Earth → Solar System → Galactic → Universal immediately after the six pillars and before Current Work. Scroll down to advance; scroll up to reverse. The four chapter buttons move to a horizon, and “Continue to Current Work” skips the journey.
 
 ## Install on GitHub
 
@@ -8,7 +8,7 @@ This update adds Earth → Solar System → Galactic → Universal between the i
 2. Open `yannleoty/-nexus-prima-site` on GitHub, on `main`.
 3. In the main repository folder, beside the existing `index.html` and `favicon.svg`, choose **Add file → Upload files**. On iPhone, choose **Browse** to select the extracted files from the Files app, preserving their names and formats.
 4. Upload `index.html` and **all eleven files whose names begin with `np-`** together. This replaces the current HTML and adds the matching image and animation files. The twelve website files belong at the same level; no new folder is needed.
-5. Commit the upload. After GitHub Pages completes the deployment, reload https://nexusprima.org/ and scroll below the introduction.
+5. Commit the upload. After GitHub Pages completes the deployment, reload https://nexusprima.org/ and scroll below Consciousness, the sixth study domain.
 
 The existing legal/privacy folders, favicon, domain settings, manifest and other repository files remain in place. The older image files may remain; this version uses the new WebP copies.
 
