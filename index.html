@@ -706,6 +706,35 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
 
+
+    /* Opening film */
+    .hero { border-bottom: 0; }
+    .hero .hero-content { padding-bottom: 0; }
+    .hero-film { margin: clamp(36px, 6vw, 72px) 0 0; }
+    .hero-film video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: var(--background);
+      border: 0;
+    }
+    .hero-film video:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 6px;
+    }
+    .film-description {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
   <!-- Nexus Prima PWA v1: isolated install controls -->
   <link rel="stylesheet" href="/pwa.css">
@@ -815,6 +844,31 @@
           survive, cooperate and build across generations as a multi-planetary
           species.
         </p>
+
+
+        <figure class="hero-film">
+          <video
+            id="nexus-prima-film"
+            width="910"
+            height="512"
+            controls
+            muted
+            playsinline
+            preload="none"
+            poster="./np-introduction-poster.jpg"
+            aria-label="Nexus Prima — a future for civilisation"
+            aria-describedby="film-description"
+          >
+            <source src="./np-introduction-2.mp4" type="video/mp4">
+            <a href="./np-introduction-2.mp4">Watch the Nexus Prima film.</a>
+          </video>
+          <figcaption class="film-description" id="film-description">
+            A 25-second concept film imagining humanity’s future: Earth from
+            orbit, a rotating space habitat, human and robotic collaboration,
+            a parent with a newborn in space, sustainable settlements and
+            networks of civilisations, ending with a gradual fade into darkness.
+          </figcaption>
+        </figure>
 
       </div>
     </section>
@@ -1397,6 +1451,56 @@
       }, { passive: true });
     })();
 
+  </script>
+
+
+  <script>
+    (() => {
+      const film = document.getElementById('nexus-prima-film');
+      if (!film || !('IntersectionObserver' in window)) return;
+
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const connection = navigator.connection;
+      let automaticStartUsed = false;
+      let visible = true;
+
+      // Native controls remain available if playback needs a tap, or JS is off.
+      const allowAutomaticStart = () => !reducedMotion.matches &&
+        !(connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType)));
+
+      // A visitor's play or pause choice takes precedence over automatic playback.
+      ['pointerdown', 'keydown'].forEach(eventName => {
+        film.addEventListener(eventName, () => { automaticStartUsed = true; });
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        const entry = entries[0];
+        visible = entry.isIntersecting;
+        if (!entry.isIntersecting) {
+          film.pause();
+          return;
+        }
+        if (entry.intersectionRatio < 0.4 || automaticStartUsed || !allowAutomaticStart() || document.hidden) return;
+        automaticStartUsed = true;
+        film.muted = true;
+        film.play().catch(() => { /* The visitor can use the native play button. */ });
+      }, { threshold: [0, 0.4] });
+      observer.observe(film);
+
+      // Stop playback if a pending play resolves after the visitor has moved on.
+      film.addEventListener('play', () => {
+        automaticStartUsed = true;
+        if (document.hidden || !visible) film.pause();
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) film.pause();
+      });
+      if (reducedMotion.addEventListener) {
+        reducedMotion.addEventListener('change', () => {
+          if (reducedMotion.matches) film.pause();
+        });
+      }
+    })();
   </script>
 
 </body>
