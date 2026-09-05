@@ -1,0 +1,42 @@
+/* Isolated PWA controls; the existing page and horizon styles are unchanged. */
+.np-pwa-install {
+  max-width: 32rem;
+  margin-top: 1.25rem;
+  color: #a5a5ab;
+  font-size: .9375rem;
+  line-height: 1.6;
+  text-align: left;
+}
+.np-pwa-install[hidden], .np-pwa-install [hidden] { display: none !important; }
+.np-pwa-install summary {
+  width: fit-content;
+  min-height: 44px;
+  padding: .5rem 0;
+  cursor: pointer;
+  color: #f4f4f4;
+}
+.np-pwa-install summary::marker { color: #ef3348; }
+.np-pwa-install summary:hover { text-decoration: underline; text-underline-offset: .25em; }
+.np-pwa-install summary:focus-visible,
+.np-pwa-install button:focus-visible {
+  outline: 2px solid #f4f4f4;
+  outline-offset: 4px;
+}
+.np-pwa-install p { margin: .5rem 0; }
+.np-pwa-install button {
+  display: inline-block;
+  min-height: 44px;
+  margin-top: .75rem;
+  padding: .625rem 1rem;
+  border: 1px solid #ef3348;
+  border-radius: 4px;
+  background: #050505;
+  color: #f4f4f4;
+  cursor: pointer;
+  font: inherit;
+}
+.np-pwa-install button:hover { background: #191013; }
+.np-pwa-install button:disabled { opacity: .65; cursor: wait; }
+@media (display-mode: standalone), (display-mode: fullscreen) {
+  .np-pwa-install { display: none; }
+}

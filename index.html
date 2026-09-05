@@ -25,6 +25,12 @@
   <!-- Web application metadata -->
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#050505">
+  <!-- Nexus Prima PWA v1: Apple home-screen support -->
+  <meta name="application-name" content="Nexus Prima">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Nexus Prima">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Open Graph metadata -->
   <meta property="og:type" content="website">
@@ -701,6 +707,9 @@
     }
 
   </style>
+  <!-- Nexus Prima PWA v1: isolated install controls -->
+  <link rel="stylesheet" href="/pwa.css">
+  <script defer src="/pwa.js"></script>
 </head>
 
 <body>
@@ -1174,6 +1183,14 @@
         >
           contact@nexusprima.org
         </a>
+
+        <!-- Nexus Prima PWA v1: install help -->
+        <details class="np-pwa-install" id="np-pwa-install">
+          <summary>Install Nexus Prima</summary>
+          <p id="np-pwa-install-help">On iPhone or iPad, open this website in Safari and choose Share → Add to Home Screen. On Android or a computer, use your browser’s Install app option, if available.</p>
+          <button type="button" id="np-pwa-install-button" hidden>Install app</button>
+          <p id="np-pwa-install-status" role="status" aria-live="polite"></p>
+        </details>
       </div>
 
       <div class="copyright">
