@@ -1,32 +1,63 @@
-/* Isolated PWA controls; the existing page and horizon styles are unchanged. */
+/* Nexus Prima PWA v1.1 — installation control only. */
 .np-pwa-install {
-  max-width: 32rem;
-  margin-top: 1.25rem;
+  width: 24rem;
+  max-width: 100%;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #303036;
+  border-radius: 8px;
+  background: #0b0b0d;
   color: #a5a5ab;
-  font-size: .9375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   line-height: 1.6;
   text-align: left;
 }
 .np-pwa-install[hidden], .np-pwa-install [hidden] { display: none !important; }
 .np-pwa-install summary {
-  width: fit-content;
-  min-height: 44px;
-  padding: .5rem 0;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 52px;
+  margin: 0;
+  padding: .875rem 1.125rem;
+  list-style: none;
   color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
-.np-pwa-install summary::marker { color: #ef3348; }
-.np-pwa-install summary:hover { text-decoration: underline; text-underline-offset: .25em; }
-.np-pwa-install summary:focus-visible,
-.np-pwa-install button:focus-visible {
+.np-pwa-install summary::-webkit-details-marker { display: none; }
+.np-pwa-install summary::marker { content: ''; }
+.np-pwa-install summary::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  margin-right: 2px;
+  border-right: 1.5px solid #ef3348;
+  border-bottom: 1.5px solid #ef3348;
+  transform: rotate(45deg) translateY(-2px);
+}
+.np-pwa-install[open] summary::after {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+.np-pwa-install summary:hover { background: #121215; text-decoration: none; }
+.np-pwa-install summary:focus-visible {
   outline: 2px solid #f4f4f4;
-  outline-offset: 4px;
+  outline-offset: -4px;
 }
-.np-pwa-install p { margin: .5rem 0; }
+.np-pwa-install p { margin: 0 1.125rem 1.125rem; font-size: 1rem; line-height: 1.65; }
+.np-pwa-install p:empty { display: none; }
 .np-pwa-install button {
   display: inline-block;
   min-height: 44px;
-  margin-top: .75rem;
+  max-width: calc(100% - 2.25rem);
+  margin: 0 1.125rem 1.125rem;
   padding: .625rem 1rem;
   border: 1px solid #ef3348;
   border-radius: 4px;
@@ -36,6 +67,7 @@
   font: inherit;
 }
 .np-pwa-install button:hover { background: #191013; }
+.np-pwa-install button:focus-visible { outline: 2px solid #f4f4f4; outline-offset: 3px; }
 .np-pwa-install button:disabled { opacity: .65; cursor: wait; }
 @media (display-mode: standalone), (display-mode: fullscreen) {
   .np-pwa-install { display: none; }
