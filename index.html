@@ -25,6 +25,12 @@
   <!-- Web application metadata -->
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#050505">
+  <!-- Nexus Prima PWA v1: Apple home-screen support -->
+  <meta name="application-name" content="Nexus Prima">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Nexus Prima">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Open Graph metadata -->
   <meta property="og:type" content="website">
@@ -562,7 +568,176 @@
         align-items: flex-start;
       }
     }
+    /* Four horizons: a static sequence enhanced only when motion is available. */
+    :root { --nav-height: 93px; }
+    html { scroll-padding-top: calc(var(--nav-height) + 20px); }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 6px;
+    }
+    .horizons { padding: 100px 0 50px; }
+    .horizons-heading { padding-bottom: 52px; }
+    .horizons-heading h2 { max-width: 800px; margin-top: 26px; }
+    .horizons-intro { max-width: 660px; margin-top: 24px; }
+    .horizon-stage { padding: 30px 0 60px; }
+    .horizon-panels { width: 100%; }
+    .horizon-panel {
+      display: grid;
+      grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+      align-items: center;
+      gap: 36px;
+      padding: 50px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .horizon-panel:last-child { border-bottom: 0; }
+    .horizon-copy { min-width: 0; }
+    .horizon-number {
+      color: var(--red);
+      font-size: .82rem;
+      letter-spacing: .2em;
+      margin-bottom: 22px;
+    }
+    .horizon-copy h3 {
+      font-size: clamp(2.4rem, 4.6vw, 4.6rem);
+      line-height: 1.04;
+      overflow-wrap: break-word;
+    }
+    .horizon-statement { color: var(--text); margin-top: 26px; font-size: 1.2rem; }
+    .horizon-description { margin-top: 12px; max-width: 420px; }
+    .horizon-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+    }
+    .horizon-visual { overflow: hidden; min-width: 0; background: #000; }
+    .horizon-scene { position: relative; }
+    .universe-network { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; pointer-events: none; }
+    .horizon-controls, .horizon-scroll-hint { display: none; }
+    .horizon-note { font-size: .82rem; margin-top: 30px; max-width: 760px; }
+    .horizon--animated .horizon-track { height: var(--track-height); }
+    .horizon--animated .horizon-stage {
+      position: sticky;
+      top: var(--nav-height);
+      height: calc(100vh - var(--nav-height));
+      height: calc(100svh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 24px 0;
+    }
+    .horizon--animated .horizon-panels { display: grid; }
+    .horizon--animated .horizon-panel {
+      grid-area: 1 / 1;
+      padding: 0;
+      border: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .horizon--animated .horizon-panel:first-child { opacity: 1; visibility: visible; }
+    .horizon--animated .horizon-controls {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 38px;
+    }
+    .horizon-step {
+      position: relative;
+      border: 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      background: transparent;
+      text-align: left;
+      padding: 15px 0 8px;
+      min-height: 48px;
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .horizon-step::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--red);
+      transform: scaleX(var(--step-progress, 0));
+      transform-origin: left;
+    }
+    .horizon-step[aria-current='step'] { color: var(--text); }
+    .horizon-step span { margin-right: 10px; color: var(--red); }
+    .horizon--animated .horizon-scroll-hint {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 16px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .horizon-scroll-hint a { border-bottom: 1px solid var(--border); }
+    .horizon--animated .horizon-note { margin-top: 20px; }
+    @media (max-width: 850px) {
+      .horizon-panel { grid-template-columns: 1fr; gap: 22px; }
+      .horizon-copy h3 { font-size: clamp(2.3rem, 6vw, 3.5rem); }
+      .horizon-number { margin-bottom: 12px; }
+      .horizon-statement { margin-top: 14px; font-size: 1.08rem; }
+      .horizon-description { margin-top: 8px; max-width: 620px; font-size: 1rem; }
+      .horizon-visual { width: min(100%, 680px); margin: 0 auto; }
+      .horizon--animated .horizon-controls { margin-top: 24px; gap: 12px; }
+    }
+    @media (max-width: 650px) {
+      :root { --nav-height: 85px; }
+      .horizons { padding-top: 75px; }
+      .horizons-heading { padding-bottom: 32px; }
+      .horizons-heading h2 { font-size: 2.6rem; }
+      .horizon-panel { padding: 35px 0; }
+      .horizon-copy h3 { font-size: 2.05rem; }
+      .horizon--animated .horizon-stage { padding: 18px 0; }
+      .horizon--animated .horizon-controls { gap: 10px; margin-top: 20px; }
+      .horizon-step { font-size: .82rem; }
+      .horizon-step span { display: block; margin: 0 0 4px; }
+      .horizon-note { font-size: .78rem; line-height: 1.5; }
+      .horizon-scroll-hint { font-size: .78rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+
+    /* Opening film */
+    .hero { border-bottom: 0; }
+    .hero .hero-content { padding-bottom: 0; }
+    .hero-film {
+      position: relative;
+      margin: clamp(36px, 6vw, 72px) 0 0;
+    }
+    .hero-film video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: var(--background);
+      border: 0;
+    }
+    .film-description {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
+  <!-- Nexus Prima PWA v1: isolated install controls -->
+  <link rel="stylesheet" href="/pwa.css">
+  <script defer src="/pwa.js"></script>
 </head>
 
 <body>
@@ -618,6 +793,7 @@
       </a>
 
       <div class="desktop-navigation">
+        <a href="#horizons">Horizons</a>
         <a href="#pillars">Pillars</a>
         <a href="#current-work">Current Work</a>
         <a href="#contact">Contact</a>
@@ -626,6 +802,8 @@
       <button
         class="menu-button"
         id="menuButton"
+        type="button"
+        aria-controls="mobileNavigation"
         aria-label="Open navigation menu"
         aria-expanded="false"
       >
@@ -639,7 +817,8 @@
       class="mobile-navigation"
       id="mobileNavigation"
     >
-      <a href="#pillars">Pillars</a>
+      <a href="#horizons">Horizons</a>
+        <a href="#pillars">Pillars</a>
       <a href="#current-work">Current Work</a>
       <a href="#contact">Contact</a>
     </div>
@@ -665,8 +844,38 @@
           species.
         </p>
 
+
+        <figure class="hero-film">
+          <video
+            id="nexus-prima-film"
+            src="./np-introduction-2.mp4?v=2"
+            width="910"
+            height="512"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            disablepictureinpicture
+            disableremoteplayback
+            poster="./np-introduction-poster.jpg"
+            aria-label="Nexus Prima — a future for civilisation"
+            aria-describedby="film-description"
+          >
+            <a href="./np-introduction-2.mp4">Watch the Nexus Prima film.</a>
+          </video>
+          <figcaption class="film-description" id="film-description">
+            A 25-second concept film imagining humanity’s future: Earth from
+            orbit, a rotating space habitat, human and robotic collaboration,
+            a parent with a newborn in space, sustainable settlements and
+            networks of civilisations, ending with a gradual fade into darkness.
+          </figcaption>
+        </figure>
+
       </div>
     </section>
+
+
 
     <section
       class="pillars"
@@ -699,10 +908,8 @@
           </div>
 
           <figure class="area-media">
-            <img
-              src="./0249869E-B0FE-485C-8C39-8F6CE053E057.png"
-              width="1536"
-              height="864"
+            <img width="1536" height="864"
+              src="./np-civilisation.webp"
               loading="lazy"
               decoding="async"
               alt="Concept illustration of interconnected future settlements across the surface of Mars, viewed from above."
@@ -737,8 +944,8 @@
 
           <figure class="area-media area-media--ai">
             <div class="ai-crop">
-              <img
-                src="./IMG_2225.jpeg"
+              <img width="1246" height="1055"
+                src="./np-ai.webp"
                 loading="lazy"
                 decoding="async"
                 alt="Abstract representation of artificial intelligence: a red central point within a dark sphere and geometric rings."
@@ -772,10 +979,8 @@
           </div>
 
           <figure class="area-media">
-            <img
-              src="./54F86752-AB64-4E8E-B0FC-A21376012DAE.png"
-              width="1536"
-              height="864"
+            <img width="1536" height="864"
+              src="./np-energy.webp"
               loading="lazy"
               decoding="async"
               alt="Concept illustration of solar arrays and energy storage infrastructure supplying a future Mars settlement."
@@ -810,10 +1015,8 @@
           </div>
 
           <figure class="area-media">
-            <img
-              src="./F2708EEF-A414-439E-8EAF-8474DA84B319.png"
-              width="1536"
-              height="864"
+            <img width="1536" height="864"
+              src="./np-space.webp"
               loading="lazy"
               decoding="async"
               alt="Concept illustration of a modular orbital outpost with solar arrays above Earth's curved horizon."
@@ -848,10 +1051,8 @@
           </div>
 
           <figure class="area-media">
-            <img
-              src="./7514AED5-048C-40E7-8CFC-26F1FA87574D.png"
-              width="1536"
-              height="864"
+            <img width="1536" height="864"
+              src="./np-biotechnology.webp"
               loading="lazy"
               decoding="async"
               alt="Illustration of a biotechnology laboratory with glass bioreactors, plant cultures, a microscope and culture trays."
@@ -885,10 +1086,8 @@
           </div>
 
           <figure class="area-media">
-            <img
-              src="./39276F83-69BE-4F87-B70F-FDDFA4389CDC.png"
-              width="1536"
-              height="864"
+            <img width="1536" height="864"
+              src="./np-consciousness.webp"
               loading="lazy"
               decoding="async"
               alt="Illustrative rendering of a translucent human brain with fine white pathways and subtle red highlights."
@@ -898,6 +1097,72 @@
         </article>
 
       </div>
+    </section>
+
+    <section class="horizons" id="horizons" aria-labelledby="horizons-title">
+      <div class="container horizons-heading">
+        <div class="eyebrow">Our long-term vision</div>
+        <h2 id="horizons-title">Four horizons of civilisation.</h2>
+        <p class="horizons-intro">Beginning on Earth. Looking beyond the limits of one world, one star and one galaxy.</p>
+      </div>
+      <div class="horizon-track">
+        <div class="container horizon-stage">
+          <div class="horizon-panels">
+            <article class="horizon-panel" id="horizon-earth">
+              <div class="horizon-copy">
+                <div class="horizon-number">01 / EARTH</div>
+                <h3>Our starting point.</h3>
+                <p class="horizon-statement">Building civilisations that endure.</p>
+                <p class="horizon-description">Protecting life and building the foundations of a shared future.</p>
+              </div>
+              <figure class="horizon-visual"><div class="horizon-scene"><img width="1536" height="864" class="horizon-image" src="./np-horizon-earth.webp" loading="lazy" decoding="async" alt="Illustration of Earth with blue oceans, cloud systems and a delicate atmospheric rim against black space."></div></figure>
+            </article>
+            <article class="horizon-panel" id="horizon-solar">
+              <div class="horizon-copy">
+                <div class="horizon-number">02 / SOLAR SYSTEM</div>
+                <h3>Beyond one world.</h3>
+                <p class="horizon-statement">Extending humanity’s presence.</p>
+                <p class="horizon-description">Exploring the habitats and systems that could sustain civilisation across the Solar System.</p>
+              </div>
+              <figure class="horizon-visual"><div class="horizon-scene"><img width="1536" height="864" class="horizon-image" src="./np-horizon-solar.webp" loading="lazy" decoding="async" alt="Illustration of the Sun and planets on faint orbital paths, with distances compressed for visibility."></div></figure>
+            </article>
+            <article class="horizon-panel" id="horizon-galactic">
+              <div class="horizon-copy">
+                <div class="horizon-number">03 / GALACTIC</div>
+                <h3>Across the stars.</h3>
+                <p class="horizon-statement">Imagining connected civilisations.</p>
+                <p class="horizon-description">A distant horizon of knowledge and cooperation between worlds around other stars.</p>
+              </div>
+              <figure class="horizon-visual"><div class="horizon-scene"><img width="1536" height="864" class="horizon-image" src="./np-horizon-galaxy.webp" loading="lazy" decoding="async" alt="Artistic view of a spiral galaxy inspired by the Milky Way, with a luminous centre, fine stars and dark dust lanes."></div></figure>
+            </article>
+            <article class="horizon-panel" id="horizon-universal">
+              <div class="horizon-copy">
+                <div class="horizon-number">04 / UNIVERSAL</div>
+                <h3>An open horizon.</h3>
+                <p class="horizon-statement">Networks of civilisations.</p>
+                <p class="horizon-description">The long-term dream of creating or joining a network of civilisations between galaxies.</p>
+              </div>
+              <figure class="horizon-visual"><div class="horizon-scene"><img width="1536" height="864" class="horizon-image" src="./np-horizon-universe.webp" loading="lazy" decoding="async" alt="Conceptual intergalactic vista with many distant galaxies, representing an open universal horizon."><svg class="universe-network" viewBox="0 0 1000 562.5" aria-hidden="true" focusable="false">
+                <g fill="none" stroke="#ef3348" stroke-width=".8">
+                  <path d="M500 279 Q345 110 213 94"/>
+                  <path d="M500 279 Q575 148 710 121"/>
+                  <path d="M500 279 Q683 266 820 380"/>
+                  <path d="M500 279 Q310 315 135 455"/>
+                  <path d="M500 279 Q601 420 690 455"/>
+                </g>
+              </svg></div></figure>
+            </article>
+          </div>
+          <div class="horizon-controls" role="group" aria-label="Choose a horizon">
+            <button class="horizon-step" type="button" data-horizon="0" aria-controls="horizon-earth"><span>01</span>Earth</button>
+            <button class="horizon-step" type="button" data-horizon="1" aria-controls="horizon-solar"><span>02</span>Solar System</button>
+            <button class="horizon-step" type="button" data-horizon="2" aria-controls="horizon-galactic"><span>03</span>Galactic</button>
+            <button class="horizon-step" type="button" data-horizon="3" aria-controls="horizon-universal"><span>04</span>Universal</button>
+          </div>
+          <div class="horizon-scroll-hint"><span>Scroll to explore</span><a href="#current-work">Continue to Current Work ↓</a></div>
+        </div>
+      </div>
+      <div class="container"><p class="horizon-note">Conceptual illustrations; scales and distances are compressed. The later horizons express a long-term aspiration.</p></div>
     </section>
 
     <section
@@ -974,6 +1239,14 @@
         >
           contact@nexusprima.org
         </a>
+
+        <!-- Nexus Prima PWA v1: install help -->
+        <details class="np-pwa-install" id="np-pwa-install">
+          <summary>Install Nexus Prima</summary>
+          <p id="np-pwa-install-help">On iPhone or iPad, open this website in Safari and choose Share → Add to Home Screen. On Android or a computer, use your browser’s Install app option, if available.</p>
+          <button type="button" id="np-pwa-install-button" hidden>Install app</button>
+          <p id="np-pwa-install-status" role="status" aria-live="polite"></p>
+        </details>
       </div>
 
       <div class="copyright">
@@ -998,6 +1271,7 @@
 
     function closeMenu() {
       mobileNavigation.classList.remove("open");
+      menuButton.setAttribute("aria-label", "Open navigation menu");
       menuButton.classList.remove("open");
 
       menuButton.setAttribute(
@@ -1010,10 +1284,8 @@
       const isOpen =
         mobileNavigation.classList.toggle("open");
 
-      menuButton.classList.toggle(
-        "open",
-        isOpen
-      );
+      menuButton.classList.toggle("open", isOpen);
+      menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 
       menuButton.setAttribute(
         "aria-expanded",
@@ -1029,7 +1301,239 @@
           closeMenu
         );
       });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileNavigation.classList.contains("open")) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+  </script>
+  <script src="./np-motion.min.js"></script>
+  <script>
+    (() => {
+      const journey = document.getElementById('horizons');
+      if (!journey || !window.gsap || !window.ScrollTrigger) return;
+      const track = journey.querySelector('.horizon-track');
+      const stage = journey.querySelector('.horizon-stage');
+      const panels = [...journey.querySelectorAll('.horizon-panel')];
+      const pictures = [...journey.querySelectorAll('.horizon-image')];
+      const scenes = [...journey.querySelectorAll('.horizon-scene')];
+      const copies = [...journey.querySelectorAll('.horizon-copy')];
+      const steps = [...journey.querySelectorAll('.horizon-step')];
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let context, timeline, resizeTimer;
+      let assetsReady = false;
+      let activeIndex = -1;
+      gsap.registerPlugin(ScrollTrigger);
+
+      function resetJourney() {
+        if (context) context.revert();
+        context = null;
+        timeline = null;
+        activeIndex = -1;
+        journey.classList.remove('horizon--animated');
+        journey.style.removeProperty('--track-height');
+        panels.forEach(panel => panel.removeAttribute('aria-hidden'));
+        steps.forEach(step => {
+          step.removeAttribute('aria-current');
+          step.style.removeProperty('--step-progress');
+        });
+      }
+
+      function setupJourney() {
+        resetJourney();
+        if (!assetsReady || reducedMotion.matches) return;
+        journey.classList.add('horizon--animated');
+        const screenHeight = stage.clientHeight;
+        // Keep a readable static sequence on short screens or enlarged text.
+        if (screenHeight < 480 || stage.scrollHeight > screenHeight + 2) {
+          resetJourney();
+          return;
+        }
+        const distance = Math.max(1800, screenHeight * 4);
+        journey.style.setProperty('--track-height', (screenHeight + distance) + 'px');
+        const headerHeight = () => document.querySelector('header').offsetHeight;
+
+        context = gsap.context(() => {
+          const position = { value: 0 };
+          gsap.set(panels, { autoAlpha: 0 });
+          gsap.set(panels[0], { autoAlpha: 1 });
+          gsap.set(scenes, { scale: 1.16, transformOrigin: '50% 50%' });
+          gsap.set(scenes[0], { scale: 1 });
+          gsap.set('.universe-network', { opacity: 0 });
+
+          function updateSelection() {
+            const t = position.value;
+            // Change the accessible chapter when the next image becomes dominant.
+            const index = Math.min(3, Math.floor(t + .12));
+            if (index !== activeIndex) {
+              activeIndex = index;
+              panels.forEach((panel, i) => panel.setAttribute('aria-hidden', String(i !== index)));
+              steps.forEach((step, i) => {
+                if (i === index) step.setAttribute('aria-current', 'step');
+                else step.removeAttribute('aria-current');
+              });
+            }
+            steps.forEach((step, i) => step.style.setProperty('--step-progress', String(Math.max(0, Math.min(1, t - i)))));
+          }
+
+          timeline = gsap.timeline({
+            onUpdate: updateSelection,
+            scrollTrigger: {
+              trigger: track,
+              start: () => 'top ' + headerHeight(),
+              end: () => '+=' + distance,
+              scrub: .45,
+              invalidateOnRefresh: true
+            }
+          });
+          timeline.to(position, { value: 4, duration: 4, ease: 'none' }, 0);
+          for (let i = 0; i < 3; i++) {
+            const start = i + .52;
+            timeline.to(scenes[i], { scale: .3, duration: .63, ease: 'power1.inOut' }, start);
+            timeline.to(panels[i], { autoAlpha: 0, duration: .38, ease: 'none' }, start + .23);
+            timeline.fromTo(panels[i + 1], { autoAlpha: 0 }, { autoAlpha: 1, duration: .4, ease: 'none' }, start + .24);
+            timeline.to(scenes[i + 1], { scale: 1, duration: .62, ease: 'power1.out' }, start + .24);
+            timeline.to(copies[i], { y: -12, duration: .4, ease: 'power1.in' }, start + .12);
+            timeline.fromTo(copies[i + 1], { y: 12 }, { y: 0, duration: .42, ease: 'power1.out' }, start + .26);
+          }
+          timeline.to(scenes[3], { scale: .93, duration: .65, ease: 'none' }, 3.35);
+          timeline.to('.universe-network', { opacity: .55, duration: .6, ease: 'none' }, 3.4);
+          updateSelection();
+        }, journey);
+        ScrollTrigger.refresh();
+      }
+
+      steps.forEach((step, index) => step.addEventListener('click', () => {
+        if (!timeline || !timeline.scrollTrigger) return;
+        const trigger = timeline.scrollTrigger;
+        const target = (index + .25) / 4;
+        window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * target, behavior: 'smooth' });
+      }));
+
+      // Decode the four frames before stacking them, so slow connections retain
+      // the readable static version instead of an empty pinned scene.
+      async function loadArtwork() {
+        if (assetsReady) return;
+        try {
+          await Promise.all(pictures.map(async img => {
+            img.loading = 'eager';
+            if (img.decode) await img.decode();
+            else if (!img.complete) await new Promise((resolve, reject) => {
+              img.addEventListener('load', resolve, { once: true });
+              img.addEventListener('error', reject, { once: true });
+            });
+            if (!img.naturalWidth) throw new Error('Artwork unavailable');
+          }));
+          assetsReady = true;
+          // Avoid moving content if someone has already reached the static cards.
+          if (track.getBoundingClientRect().top >= document.querySelector('header').offsetHeight) setupJourney();
+        } catch (_) { resetJourney(); }
+      }
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); loadArtwork(); }
+        }, { rootMargin: '1000px 0px' });
+        observer.observe(journey);
+      } else { loadArtwork(); }
+
+      reducedMotion.addEventListener('change', setupJourney);
+      // Width changes cover orientation changes and desktop resizing; ignoring
+      // height-only mobile browser chrome changes keeps the journey stable.
+      let previousWidth = window.innerWidth;
+      let previousHeight = window.innerHeight;
+      window.addEventListener('resize', () => {
+        const widthChanged = window.innerWidth !== previousWidth;
+        const heightChanged = Math.abs(window.innerHeight - previousHeight) > 160;
+        if (!widthChanged && !heightChanged) return;
+        previousWidth = window.innerWidth;
+        previousHeight = window.innerHeight;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setupJourney, 180);
+      }, { passive: true });
+    })();
+
+  </script>
+
+
+  <script id="np-film-playback">
+    (() => {
+      const film = document.getElementById('nexus-prima-film');
+      if (!film) return;
+
+      // Silent, inline, continuous playback. No player controls or overlays.
+      film.defaultMuted = true;
+      film.muted = true;
+      film.autoplay = true;
+      film.loop = true;
+      film.playsInline = true;
+      film.controls = false;
+
+      let starting = false;
+      const onScreen = () => {
+        const rect = film.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+      };
+      let visible = onScreen();
+      const shouldPlay = () => visible && !document.hidden;
+
+      async function syncPlayback() {
+        if (!shouldPlay()) {
+          film.pause();
+          return;
+        }
+        if (starting || !film.paused || film.error) return;
+        starting = true;
+        film.muted = true;
+        try {
+          await film.play();
+          if (!shouldPlay()) film.pause();
+        } catch (error) {
+          // A scroll or tab change can interrupt loading; permit another attempt.
+          if (error.name === 'AbortError' && shouldPlay()) {
+            window.requestAnimationFrame(syncPlayback);
+          }
+          // Browser autoplay restrictions are retried on ordinary page interaction.
+        } finally {
+          starting = false;
+        }
+      }
+
+      film.addEventListener('playing', () => {
+        if (!shouldPlay()) film.pause();
+      });
+      film.addEventListener('loadedmetadata', syncPlayback);
+      film.addEventListener('canplay', syncPlayback);
+      film.addEventListener('ended', () => {
+        if (shouldPlay()) {
+          film.currentTime = 0;
+          syncPlayback();
+        }
+      });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          visible = entries[0].isIntersecting;
+          syncPlayback();
+        }, { threshold: 0 });
+        observer.observe(film);
+      } else {
+        window.addEventListener('scroll', () => {
+          visible = onScreen();
+          syncPlayback();
+        }, { passive: true });
+      }
+      window.addEventListener('pageshow', () => {
+        visible = onScreen();
+        syncPlayback();
+      });
+      document.addEventListener('visibilitychange', syncPlayback);
+      document.addEventListener('touchend', syncPlayback, { passive: true });
+      document.addEventListener('click', syncPlayback, { passive: true });
+      syncPlayback();
+    })();
   </script>
 
 </body>
 </html>
+
