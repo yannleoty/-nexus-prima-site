@@ -830,122 +830,159 @@
 
   </header>
 
-  <main id="top">
-
-    
+  
 <style>
-  .hero::before {
+  .hero.hero--universe {
+    display: block !important;
+    min-height: 0 !important;
+    background: #000 !important;
+    overflow: hidden;
+    border-bottom: 0;
+  }
+
+  .hero.hero--universe::before {
     display: none !important;
     content: none !important;
   }
-</style>
 
-<section class="hero" style="
-  background: #000 !important;
-  padding-top: 0 !important;
-  display: block !important;
-">
-  <div style="
+  .hero-universe-image {
     position: relative;
     width: 100%;
-    height: min(82vw, 650px);
-    min-height: 320px;
+    height: clamp(340px, 75vw, 650px);
     overflow: hidden;
-  ">
+  }
+
+  .hero-universe-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 38%;
+  }
+
+  .hero-universe-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.25) 65%,
+      #000 100%
+    );
+    pointer-events: none;
+  }
+
+  .hero.hero--universe .hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: -110px !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .hero.hero--universe .hero-film {
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 44px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+  }
+
+  .hero.hero--universe .hero-film video {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 0 !important;
+  }
+
+  @media (max-width: 650px) {
+    .hero-universe-image {
+      height: 95vw;
+      min-height: 340px;
+    }
+
+    .hero.hero--universe .hero-content {
+      margin-top: -80px !important;
+    }
+  }
+</style>
+
+<section class="hero hero--universe">
+
+  <div class="hero-universe-image">
     <img
       src="./nexus-prima-universe.PNG"
       alt=""
       aria-hidden="true"
-      style="
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 38%;
-      "
     >
-    <div style="
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        transparent 55%,
-        #000 100%
-      );
-      pointer-events: none;
-    "></div>
   </div>
 
-  <div class="container hero-content"
-       style="padding-top: 0 !important; min-height: auto !important;">
+  <div class="container hero-content">
 
+    <div class="eyebrow">
+      Nexus Prima
+    </div>
 
-        <div class="eyebrow">
-          Nexus Prima
-        </div>
+    <h1>
+      Expanding Humanity’s Next Chapter
+    </h1>
 
-        <h1>
-          Expanding Humanity’s Next Chapter
-        </h1>
+    <p class="hero-description">
+      A civilisational initiative dedicated to studying,
+      developing and building the knowledge, systems,
+      institutions, technologies and ideas that may help
+      humanity survive, cooperate and expand across
+      generations as a multi-planetary species.
+    </p>
 
-        <p class="hero-description">
-          A civilisational initiative dedicated to studying, developing and building the knowledge, systems, institutions, technologies and ideas that may help humanity survive, cooperate and expand across generations as a multi-planetary species.
+  </div>
 
-        </p>
+  <figure class="hero-film">
 
+    <video
+      id="nexus-prima-film"
+      src="./np-introduction-20260911.mp4"
+      width="890"
+      height="512"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      disablepictureinpicture
+      disableremoteplayback
+      poster="./np-introduction-20260911-poster.jpg"
+      aria-label="Nexus Prima — a future for civilisation"
+      aria-describedby="film-description"
+    >
+      <a href="./np-introduction-20260911.mp4">
+        Watch the Nexus Prima film.
+      </a>
+    </video>
 
-        
-<figure class="hero-film" style="
-  position: relative !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 44px 0 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  overflow: hidden;
-">
+    <figcaption
+      class="film-description"
+      id="film-description"
+    >
+      A silent concept film opening with the Nexus Prima mark,
+      then imagining humanity's future across orbital habitats,
+      human and robotic collaboration, sustainable settlements
+      and networks of civilisations.
+    </figcaption>
 
-          <video
-            id="nexus-prima-film"
-            src="./np-introduction-20260911.mp4"
-            width="890"
-            height="512"
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="auto"
-            disablepictureinpicture
-            disableremoteplayback
-            poster="./np-introduction-20260911-poster.jpg"
-            aria-label="Nexus Prima — a future for civilisation"
-            aria-describedby="film-description"
-          
-style="
-  display: block;
-  width: 100% !important;
-  max-width: none !important;
-  height: auto !important;
-  border-radius: 0 !important;
-  object-fit: contain;
-"
- >
-            <a href="./np-introduction-20260911.mp4">Watch the Nexus Prima film.</a>
-          </video>
-          <figcaption class="film-description" id="film-description">
-            A silent concept film opening with the Nexus Prima mark, then
-            imagining humanity's future across orbital habitats, human and
-            robotic collaboration, sustainable settlements and networks of
-            civilisations.
-          </figcaption>
-        </figure>
+  </figure>
 
-      </div>
-    </section>
-
-
+</section>
 
     <section
       class="pillars"
