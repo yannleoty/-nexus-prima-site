@@ -76,3 +76,72 @@ button{font:inherit;color:inherit}
   .section{padding-top:88px;padding-bottom:88px}.work-list li{padding:22px 0}.closing{min-height:72svh}.closing h2{font-size:clamp(3.8rem,16vw,6rem)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}[data-reveal]{opacity:1;transform:none}}
+
+/* Nexus Prima — Universe hero */
+
+.hero {
+  position: relative;
+  background: #000 !important;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: min(65vw, 780px);
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.05) 55%,
+      #000 100%
+    ),
+    url("./nexus-prima-universe.PNG");
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(350px, 42vw, 620px);
+}
+
+/* Full-width introduction video */
+
+.hero-film {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.hero-film video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+  .hero::before {
+    height: 105vw;
+    background-position: center 38%;
+  }
+
+  .hero .hero-content {
+    padding-top: 78vw;
+  }
+}
