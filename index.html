@@ -882,6 +882,38 @@
     min-height: 0 !important;
   }
 
+/* Second space image — behind the presentation */
+
+.hero.hero--universe .hero-content {
+  isolation: isolate;
+}
+
+.hero.hero--universe .hero-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -90px;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      rgba(0,0,0,0.25) 26%,
+      rgba(0,0,0,0.4) 70%,
+      #000 100%
+    ),
+    url("./nexus-prima-space-continuation.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
   .hero.hero--universe .hero-film {
     position: relative !important;
     left: auto !important;
