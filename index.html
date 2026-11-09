@@ -828,11 +828,12 @@
   <a href="#contact">Contact</a>
 </div>
 
-  </header>
+    </header>
 
-  
-<style>
-  .hero.hero--universe {
+  <main id="top">
+
+  <style>
+    .hero.hero--universe {
     display: block !important;
     min-height: 0 !important;
     background: #000 !important;
@@ -895,15 +896,17 @@
     overflow: hidden;
   }
 
-  .hero.hero--universe .hero-film video {
-    display: block;
-    width: 100% !important;
-    max-width: none !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    border-radius: 0 !important;
-  }
+  
+.hero.hero--universe .hero-film video {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0 !important;
+}
+
 
   @media (max-width: 650px) {
     .hero-universe-image {
