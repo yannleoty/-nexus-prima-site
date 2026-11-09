@@ -832,8 +832,11 @@
 
   <main id="top">
 
-  <style>
-    .hero.hero--universe {
+  
+<style>
+  /* One continuous universe background */
+
+  .hero.hero--universe {
     display: block !important;
     min-height: 0 !important;
     background: #000 !important;
@@ -846,139 +849,100 @@
     content: none !important;
   }
 
-  .hero-universe-image {
+  .hero-scene {
     position: relative;
-    width: 100%;
-    height: clamp(340px, 75vw, 650px);
-    overflow: hidden;
+    isolation: isolate;
+    background-image:
+      url("./nexus-prima-universe-final.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000;
+
+    padding: clamp(340px, 38vw, 600px) 0 64px;
   }
 
-  .hero-universe-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 38%;
-  }
-
-  .hero-universe-image::after {
+  .hero-scene::before {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
     background: linear-gradient(
       to bottom,
-      transparent 40%,
-      rgba(0, 0, 0, 0.25) 65%,
+      transparent 0%,
+      rgba(0,0,0,0.08) 32%,
+      rgba(0,0,0,0.30) 55%,
+      rgba(0,0,0,0.50) 75%,
       #000 100%
     );
-    pointer-events: none;
   }
 
   .hero.hero--universe .hero-content {
     position: relative;
-    z-index: 2;
-    margin-top: -110px !important;
+    z-index: 1;
+    margin: 0 auto !important;
     padding: 0 !important;
     min-height: 0 !important;
   }
 
-/* Second space image — behind the presentation */
-
-.hero.hero--universe .hero-content {
-  isolation: isolate;
-}
-
-.hero.hero--universe .hero-content::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -90px;
-  bottom: -55px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  pointer-events: none;
-
-  background-image:
-    linear-gradient(
-      to bottom,
-      #000 0%,
-      rgba(0,0,0,0.25) 26%,
-      rgba(0,0,0,0.4) 70%,
-      #000 100%
-    ),
-    url("./nexus-prima-space-continuation.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
+  /* Full-width video */
 
   .hero.hero--universe .hero-film {
     position: relative !important;
-    left: auto !important;
-    transform: none !important;
     display: block;
     width: 100% !important;
     max-width: none !important;
-    margin: 44px 0 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
     overflow: hidden;
   }
 
-  
-.hero.hero--universe .hero-film video {
-  display: block;
-  width: 100% !important;
-  max-width: none !important;
-  height: auto !important;
-  aspect-ratio: auto;
-  object-fit: contain;
-  border-radius: 0 !important;
-}
-
+  .hero.hero--universe .hero-film video {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 0 !important;
+  }
 
   @media (max-width: 650px) {
-    .hero-universe-image {
-      height: 95vw;
-      min-height: 340px;
-    }
-
-    .hero.hero--universe .hero-content {
-      margin-top: -80px !important;
+    .hero-scene {
+      padding-top: clamp(270px, 78vw, 400px);
+      padding-bottom: 44px;
+      background-position: center top;
     }
   }
 </style>
 
 <section class="hero hero--universe">
 
-  <div class="hero-universe-image">
-    <img
-      src="./nexus-prima-universe.PNG"
-      alt=""
-      aria-hidden="true"
-    >
-  </div>
+  <div class="hero-scene">
 
-  <div class="container hero-content">
+    <div class="container hero-content">
 
-    <div class="eyebrow">
-      Nexus Prima
+      <div class="eyebrow">
+        Nexus Prima
+      </div>
+
+      <h1>
+        Expanding Humanity’s Next Chapter
+      </h1>
+
+      <p class="hero-description">
+        A civilisational initiative dedicated to studying,
+        developing and building the knowledge, systems,
+        institutions, technologies and ideas that may help
+        humanity survive, cooperate and expand across
+        generations as a multi-planetary species.
+      </p>
+
     </div>
-
-    <h1>
-      Expanding Humanity’s Next Chapter
-    </h1>
-
-    <p class="hero-description">
-      A civilisational initiative dedicated to studying,
-      developing and building the knowledge, systems,
-      institutions, technologies and ideas that may help
-      humanity survive, cooperate and expand across
-      generations as a multi-planetary species.
-    </p>
 
   </div>
 
